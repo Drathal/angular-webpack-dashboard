@@ -73,7 +73,6 @@ module.exports = function makeWebpackConfig(options) {
         })
     ];
 
-
     config.module.loaders.push(scssLoader);
 
     //noinspection JSUnresolvedFunction

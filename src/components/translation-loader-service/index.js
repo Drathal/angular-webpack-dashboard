@@ -1,7 +1,7 @@
 var angular = require('angular');
 
 module.exports = angular
-    .module('cleverbridge.service.translationLoader', [])
+    .module('component.service.translationLoader', [])
     .filter('htmlSafe', function($sce) {
         return function(htmlCode) {
             return $sce['trustAsHtml'](htmlCode);
