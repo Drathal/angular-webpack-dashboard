@@ -1,0 +1,15 @@
+<div class="jumbotron">
+
+    <h1>{{ 'FEATUREB.HEADING' | translate }}</h1>
+
+    <span ng-bind-html="'FEATUREB.INTROTEXT' | translate:ctrl "></span>
+
+    <span  bind-html-compile="'FEATUREB.USERINFO' | translate:ctrl "></span>
+
+    <p>User Overloading: <span ui-user-info scope-overload="{ 'name' : 'Lucy' }"></span></p>
+    <p>User Overloading: <span ui-user-info scope-overload="{ 'name' : '{{ctrl.property}}' }"></span></p>
+
+    <span counter></span>
+    <button class="btn btn-info" ui-sref="app.feature-a">Try Feature A</button>
+
+</div>

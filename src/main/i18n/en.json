@@ -1,0 +1,11 @@
+{
+  "APP": {
+    "LANGUAGES": {
+      "ENGLISH": "English",
+      "GERMAN": "German"
+    },
+    "LANGUAGE": "Language",
+    "NAVTITLE": "Docker Registry",
+    "GREETING": "Hi, {{ name }}!"
+  }
+}

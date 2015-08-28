@@ -1,0 +1,20 @@
+<md-sidenav layout="column" class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$mdMedia('gt-md')" tabindex="-1">
+    <md-toolbar>
+        <div class="md-toolbar-tools">
+            <img ng-src="{{ ::app.miniLogoUrl }}" style="width:30px;"/>
+            <h1 flex>&nbsp;{{ ::app.title }}</h1>
+        </div>
+    </md-toolbar>
+    <md-content ui-view="left-content" role="navigation" flex md-scroll-y></md-content>
+</md-sidenav>
+
+<div layout="column" class="relative" layout-fill role="main">
+    <md-toolbar ui-view="main-toolbar">
+        <div class="md-toolbar-tools">
+        </div>
+    </md-toolbar>
+    <md-content ui-view="main-content" flex md-scroll-y >
+        <md-icon md-font-set="cb-icons" class="md-accent">&#xf132</md-icon>
+    </md-content>
+</div>
+

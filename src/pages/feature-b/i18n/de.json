@@ -1,0 +1,9 @@
+{
+  "FEATUREB": {
+    "HOME" : "Seite",
+    "HEADING": "Feature B!",
+    "TRYFEATUREB" : "Teste auch Feature a",
+    "INTROTEXT" : "<h2>Feature B benutzt auch das \"Component Pattern\"</h2><br /><p>Wir haben sogar nen Counter auf der Seite! Und ne Kontroller Prop: {{ property }}</p>",
+    "USERINFO" : "<p>Oh, und hier nutzen wir <code>ui-user-info</code> aus einem Translate-string heraus... Woah! <span ui-user-info scope-overload></span></p>"
+  }
+}
