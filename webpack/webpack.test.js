@@ -1,7 +1,33 @@
-/**
- * Webpack config for tests
- */
-module.exports = require('./webpack.make')({
-    BUILD: false,
-    TEST: true
-});
+module.exports = function () {
+
+    return {
+
+        devtool: 'inline-source-map',
+
+        node: {__dirname: true},
+
+        module: {
+
+            preLoaders: [
+                {
+                    test: /\.js$/,
+                    exclude: [/test/, /node_modules/, /\.spec\.js$/],
+                    loader: 'istanbul-instrumenter-loader'
+                }
+            ],
+
+            loaders: [
+                {test: /\.(jpe?g|png|gif|svg|woff|woff2|ttf|eot|ico)$/, loader: 'file'},
+                {test: /\.(scss|css)$/, loader: 'css-loader!postcss!sass'},
+                {test: /\.json(\?.*)?$/, loader: 'json'},
+                {test: /\.html$/, loader: 'raw'}
+            ]
+        },
+
+        resolve: {
+            root: __dirname + '/src',
+            modulesDirectories: ['node_modules', 'src', '.']
+        }
+
+    };
+};

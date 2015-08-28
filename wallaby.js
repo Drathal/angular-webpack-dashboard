@@ -1,5 +1,5 @@
 var wallabyWebpack = require('wallaby-webpack');
-var webpackTestConfig = require('./webpack/webpack.test.js');
+var webpackTestConfig = require('./webpack/webpack.test.js')();
 
 delete webpackTestConfig.devtool;
 

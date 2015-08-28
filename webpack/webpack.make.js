@@ -6,11 +6,11 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 var srcDir = path.join(__dirname, '../src');
+var buildDir = path.join(__dirname, '../build');
 
 module.exports = function makeWebpackConfig(options) {
 
     var BUILD = !!options.BUILD;
-    var TEST = !!options.TEST;
 
     var config = {};
 
@@ -21,23 +21,16 @@ module.exports = function makeWebpackConfig(options) {
     };
 
     config.output = {
-        path: path.normalize(__dirname + '/../build'),
+        path: buildDir,
         publicPath: BUILD ? '/' : 'http://localhost:8080/',
         filename: BUILD ? '[name].[hash].js' : '[name].bundle.js',
         chunkFilename: BUILD ? '[name].[hash].js' : '[name].bundle.js'
     };
 
-    if (TEST) {
-        config.entry = {};
-        config.output = {};
-    }
-
-    if (TEST) {
-        config.devtool = 'inline-source-map';
-    } else if (BUILD) {
+    if (BUILD) {
         config.devtool = 'source-map';
     } else {
-        config.devtool = 'eval-source-map';
+        config.devtool = 'eval';
     }
 
     config.module = {
@@ -70,38 +63,23 @@ module.exports = function makeWebpackConfig(options) {
         ]
     };
 
-    var scssLoader = {loader: 'null'};
+    var scssLoader = {
+        test: /\.(scss|css)$/,
+        loader: ExtractTextPlugin.extract('style-loader', 'css-loader?sourceMap!postcss!sass')
+    };
+    config.postcss = [
+        autoprefixer({
+            browsers: ['last 2 version']
+        })
+    ];
 
-    if (!TEST) {
-        scssLoader = {
-            test: /\.(scss|css)$/,
-            loader: ExtractTextPlugin.extract('style-loader', 'css-loader?sourceMap!postcss!sass')
-        };
-        config.postcss = [
-            autoprefixer({
-                browsers: ['last 2 version']
-            })
-        ];
-    }
 
     config.module.loaders.push(scssLoader);
-
-    if (TEST) {
-        config.module.preLoaders.push({
-            test: /\.js$/,
-            exclude: [
-                /test/,
-                /node_modules/,
-                /\.spec\.js$/
-            ],
-            loader: 'istanbul-instrumenter-loader'
-        });
-    }
 
     //noinspection JSUnresolvedFunction
     config.plugins = [
         new ExtractTextPlugin('[name].[hash].css', {
-            disable: !BUILD || TEST,
+            disable: !BUILD,
             allChunks: true
         }),
         new webpack.ProvidePlugin({
@@ -111,18 +89,16 @@ module.exports = function makeWebpackConfig(options) {
         })
     ];
 
-    if (!TEST) {
-        config.plugins.push(
-            new HtmlWebpackPlugin({
-                title: 'Webpack Angular',
-                template: './src/index.html',
-                hash: true,
-                inject: 'body',
-                favicon: './src/assets/image/favicon.ico',
-                minify: BUILD
-            })
-        );
-    }
+    config.plugins.push(
+        new HtmlWebpackPlugin({
+            title: 'Webpack Angular',
+            template: './src/index.html',
+            hash: true,
+            inject: 'body',
+            favicon: './src/assets/image/favicon.ico',
+            minify: BUILD
+        })
+    );
 
     if (BUILD) {
 
@@ -155,7 +131,7 @@ module.exports = function makeWebpackConfig(options) {
     }
 
     config.devServer = {
-        contentBase: './build',
+        contentBase: buildDir,
         stats: {
             modules: false,
             cached: false,
@@ -165,7 +141,6 @@ module.exports = function makeWebpackConfig(options) {
     };
 
     config.node = {
-        //__filename: true,
         __dirname: true
     };
 
