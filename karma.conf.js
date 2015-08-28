@@ -46,6 +46,10 @@ module.exports = function karmaConfig(config) {
             ]
         },
 
+        webpackServer: {
+            noInfo: true
+        },
+
         plugins: [
             'karma-webpack',
             'karma-coverage',
