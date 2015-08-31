@@ -17,9 +17,11 @@ module.exports = function karmaConfig(config) {
         ],
 
         files: [
+            /*
             {pattern: 'node_modules/angular/angular.js', watched: false},
             {pattern: 'node_modules/angular-mocks/angular-mocks.js', watched: false},
             {pattern: 'node_modules/bardjs/dist/bard.js', watched: false},
+            */
             {pattern: 'webpack/test.bundle.js', watched: false}
         ],
 

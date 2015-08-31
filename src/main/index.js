@@ -1,5 +1,6 @@
 require('../../node_modules/angular-material/angular-material.scss');
 require('../../node_modules/angular-loading-bar/build/loading-bar.css');
+require('../../node_modules/material-design-icons-iconfont/dist/material-design-icons.scss');
 require('./app.scss');
 require('jquery');
 require('lodash');
