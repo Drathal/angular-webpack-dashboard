@@ -6,9 +6,16 @@ module.exports.config = /*@ngInject*/ function($stateProvider, translationLoader
 
     $stateProvider.state('app.feature-b', {
         url: '/feature-b',
-        controller: require('./controller.js').controller,
-        controllerAs: require('./controller.js').name,
-        template: template
+        views: {
+            'toolbar-title@app': {
+                template: '{{ "FEATUREB.HEADING" | translate }}'
+            },
+            '': {
+                controller: require('./controller.js').controller,
+                controllerAs: require('./controller.js').name,
+                template: template
+            }
+        }
     });
 
 };

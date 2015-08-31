@@ -1,16 +1,28 @@
 // jscs:disable requireCamelCaseOrUpperCaseIdentifiers
 
-module.exports = /* @ngInject */ function($urlRouterProvider, $stateProvider, $translateProvider, APPCONFIG, translationLoaderProvider, $mdThemingProvider, cfpLoadingBarProvider) {
+module.exports = /* @ngInject */ function ($urlRouterProvider, $stateProvider, $translateProvider, APPCONFIG, translationLoaderProvider, $mdThemingProvider, cfpLoadingBarProvider) {
 
     $urlRouterProvider.otherwise('/feature-a');
 
     $stateProvider
         .state('app', {
             abstract: true,
-            controller: require('./controller.js').controller,
-            controllerAs: require('./controller.js').name,
-            template: require('./template.html')
+            views: {
+                '': {
+                    controller: require('./controller.js').controller,
+                    controllerAs: require('./controller.js').name,
+                    template: require('./template.html')
+                }
+            }
         });
+
+    /*
+
+     'main-toolbar': {
+     template: '<div class="md-toolbar-tools"><button class="md-button md-icon-button" ng-click="app.toggleSidebar()" hide-gt-md aria-label="Show Menu" tabindex="0"><md-icon md-font-set="material-icons">menu</md-icon> </button> Featuire A</div>'
+     },
+
+     */
 
     var languageKeys = [];
     for (var lang in APPCONFIG.languages) {
