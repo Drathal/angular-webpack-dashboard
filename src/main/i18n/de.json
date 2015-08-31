@@ -1,11 +1,12 @@
 {
-  "APP": {
-    "LANGUAGES": {
-      "ENGLISH": "Englisch",
-      "GERMAN": "Deutsch"
-    },
-    "LANGUAGE": "Sprache",
-    "NAVTITLE": "Docker Registry",
-    "GREETING": "Hallo, {{ name }}!"
-  }
+    "APP": {
+        "LANGUAGES": {
+            "ENGLISH": "Englisch",
+            "GERMAN": "Deutsch"
+        },
+        "LANGUAGE": "Sprache",
+        "NAVTITLE": "Docker Registry",
+        "GREETING": "Hallo, {{ name }}!",
+        "SIDEBAR_TITLE": "Dashboard"
+    }
 }
