@@ -11,6 +11,9 @@
 <div layout="column" class="relative" layout-fill role="main">
     <md-toolbar ui-view="main-toolbar">
         <div class="md-toolbar-tools">
+            <button class="md-button md-icon-button" ng-click="app.toggleSidebar()" hide-gt-md aria-label="Show Menu" tabindex="0">
+                <md-icon md-font-set="material-icons">menu</md-icon>
+            </button>
         </div>
     </md-toolbar>
     <md-content ui-view="main-content" flex md-scroll-y >

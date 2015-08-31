@@ -1,6 +1,6 @@
 module.exports.name = 'app';
 
-module.exports.controller = /* @ngInject */ function ($translate) {
+module.exports.controller = /* @ngInject */ function ($translate, $mdSidenav) {
 
     var self = this;
     this.miniLogoUrl = require('../assets/image/mini-logo.png');
@@ -11,6 +11,10 @@ module.exports.controller = /* @ngInject */ function ($translate) {
 
     this.changeLanguage = function (langKey) {
         $translate.use(langKey);
+    };
+
+    this.toggleSidebar = function () {
+        $mdSidenav('left').toggle();
     };
 
 };
