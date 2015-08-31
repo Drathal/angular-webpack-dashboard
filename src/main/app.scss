@@ -46,6 +46,10 @@ md-toolbar {
     padding-left:0;
 }
 
+[ui-view="toolbar-title"] {
+    padding-left:0.5em;
+}
+
 .translate-cloak {
     display: none;
 }
