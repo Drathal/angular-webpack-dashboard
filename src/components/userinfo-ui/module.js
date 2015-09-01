@@ -6,7 +6,7 @@ module.exports.component = /*@ngInject*/ function() {
         controller: UserInfoController,
         controllerAs: 'userInfoController',
         bindToController: true,
-        template: '<span style="color: #0088cc;">{{ "APP.GREETING" | translate:userInfoController }}</span>'
+        template: require('./template.html')
     };
 };
 
