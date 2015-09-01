@@ -49,6 +49,10 @@ module.exports = function makeWebpackConfig(options) {
                 ]
             },
             {
+                test: /\.(scss|css)$/,
+                loader: ExtractTextPlugin.extract('style-loader', 'css-loader?sourceMap!postcss!sass')
+            },
+            {
                 test: /\.(woff|woff2|ttf|eot|ico)$/,
                 loader: 'file'
             },
@@ -63,17 +67,11 @@ module.exports = function makeWebpackConfig(options) {
         ]
     };
 
-    var scssLoader = {
-        test: /\.(scss|css)$/,
-        loader: ExtractTextPlugin.extract('style-loader', 'css-loader?sourceMap!postcss!sass')
-    };
     config.postcss = [
         autoprefixer({
             browsers: ['last 2 version']
         })
     ];
-
-    config.module.loaders.push(scssLoader);
 
     //noinspection JSUnresolvedFunction
     config.plugins = [
@@ -85,10 +83,7 @@ module.exports = function makeWebpackConfig(options) {
             $: 'jquery',
             jQuery: 'jquery',
             _: 'lodash'
-        })
-    ];
-
-    config.plugins.push(
+        }),
         new HtmlWebpackPlugin({
             title: 'Webpack Angular',
             template: './src/index.html',
@@ -97,7 +92,7 @@ module.exports = function makeWebpackConfig(options) {
             favicon: './src/assets/image/favicon.ico',
             minify: BUILD
         })
-    );
+    ];
 
     if (BUILD) {
 
@@ -114,7 +109,8 @@ module.exports = function makeWebpackConfig(options) {
             'angular-translate-storage-local',
             'angular-ui-router',
             'angular-cookies',
-            'angular-local-storage'
+            'angular-local-storage',
+            'angular-loading-bar'
         ];
 
         //noinspection JSUnresolvedFunction
