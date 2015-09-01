@@ -1,4 +1,5 @@
 var angular = require('angular');
+require('./index.scss');
 
 module.exports = angular
     .module('component.ui.userInfo', [])
