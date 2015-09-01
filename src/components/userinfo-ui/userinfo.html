@@ -1,1 +1,19 @@
-<span >{{ "APP.GREETING" | translate:userInfoController }}</span>
+<md-menu>
+
+    <md-button aria-label="Open User Menu" class="md-icon-button" ng-click="ctrl.openLanguageMenu($mdOpenMenu, $event)">
+        <md-icon md-font-set="material-icons">person</md-icon>
+    </md-button>
+
+    <md-menu-content >
+        <md-menu-item>
+            <span >{{ "USERINFO.GREETING" | translate:ctrl }}</span>
+        </md-menu-item>
+    </md-menu-content>
+
+</md-menu>
+
+
+
+
+
+

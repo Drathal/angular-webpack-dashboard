@@ -6,7 +6,6 @@
         },
         "LANGUAGE": "Sprache",
         "NAVTITLE": "Docker Registry",
-        "GREETING": "Hallo, {{ name }}!",
         "SIDEBAR_TITLE": "Dashboard"
     }
 }

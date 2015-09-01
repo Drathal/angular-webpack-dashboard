@@ -7,9 +7,12 @@ module.exports = angular
         return {
             scope: {},
             controller: require('./userinfo.ctrl.js'),
-            controllerAs: 'userInfoController',
+            controllerAs: 'ctrl',
             bindToController: true,
             template: require('./userinfo.html')
         };
+    })
+    .config(function (translationLoaderProvider) {
+        translationLoaderProvider.add('userinfo-ui', __dirname);
     })
     .name;

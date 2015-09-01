@@ -1,0 +1,5 @@
+{
+    "USERINFO": {
+        "GREETING": "Hallo {{ name }}!"
+    }
+}
