@@ -2,7 +2,10 @@ var angular = require('angular');
 require('./userinfo.scss');
 
 module.exports = angular
-    .module('component.ui.userInfo', [])
+    .module('component.ui.userInfo', [
+        require('angular-material'),
+        require('angular-translate')
+    ])
     .directive('uiUserInfo', function () {
         return {
             scope: {},
