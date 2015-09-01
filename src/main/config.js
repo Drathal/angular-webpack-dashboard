@@ -16,14 +16,6 @@ module.exports = /* @ngInject */ function ($urlRouterProvider, $stateProvider, $
             }
         });
 
-    /*
-
-     'main-toolbar': {
-     template: '<div class="md-toolbar-tools"><button class="md-button md-icon-button" ng-click="app.toggleSidebar()" hide-gt-md aria-label="Show Menu" tabindex="0"><md-icon md-font-set="material-icons">menu</md-icon> </button> Featuire A</div>'
-     },
-
-     */
-
     var languageKeys = [];
     for (var lang in APPCONFIG.languages) {
         languageKeys.push(APPCONFIG.languages[lang].key);
