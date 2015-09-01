@@ -44,7 +44,7 @@ module.exports = function makeWebpackConfig(options) {
             {
                 test: /\.(jpe?g|png|gif|svg)$/i,
                 loaders: [
-                    'file?hash=sha512&digest=hex&name=[hash].[ext]',
+                    'url-loader?limit=10000',
                     'image-webpack?bypassOnDebug&optimizationLevel=7&interlaced=false&verbose=true'
                 ]
             },
