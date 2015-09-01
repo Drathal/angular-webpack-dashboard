@@ -4,5 +4,12 @@ module.exports = angular
     .module('component.ui.menu', [
         require('../menu-service')
     ])
-    .directive(require('./module').name, require('./module').component)
+    .directive('uiStateMenu', function() {
+        return {
+            controller: require('./menu.ctrl'),
+            controllerAs: 'ctrl',
+            bindToController: true,
+            template: require('./menu.html')
+        };
+    })
     .name;
