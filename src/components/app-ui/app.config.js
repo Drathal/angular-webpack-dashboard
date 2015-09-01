@@ -6,14 +6,7 @@ module.exports = /* @ngInject */ function ($urlRouterProvider, $stateProvider, $
 
     $stateProvider
         .state('app', {
-            abstract: true,
-            views: {
-                '': {
-                    controller: require('./controller.js').controller,
-                    controllerAs: require('./controller.js').name,
-                    template: require('./template.html')
-                }
-            }
+            abstract: true
         });
 
     var languageKeys = [];

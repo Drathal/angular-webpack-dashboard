@@ -1,4 +1,4 @@
-var template = require('./tpl.html');
+var template = require('./feature-a.html');
 
 module.exports.config = /*@ngInject*/ function ($stateProvider, translationLoaderProvider) {
 
@@ -7,12 +7,12 @@ module.exports.config = /*@ngInject*/ function ($stateProvider, translationLoade
     $stateProvider.state('app.feature-a', {
         url: '/feature-a',
         views: {
-            'toolbar-title@app': {
+            'toolbar-title@': {
                 template: '{{ "FEATUREA.HEADING" | translate }}'
             },
-            '': {
-                controller: require('./controller.js').controller,
-                controllerAs: require('./controller.js').name,
+            '@': {
+                controller: require('./feature-a.ctrl.js').controller,
+                controllerAs: require('./feature-a.ctrl.js').name,
                 template: template
             }
         }

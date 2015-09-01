@@ -1,6 +1,6 @@
-var Controller = require('./controller').controller;
+var Controller = require('./app.ctrl');
 
-describe('main', function () {
+describe('app', function () {
     describe('controller', function () {
 
         var $translate;

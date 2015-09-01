@@ -20,7 +20,7 @@ module.exports = angular
             }
         };
     })
-    .config(require('./route.js').config)
-    .run(require('./route.js').run)
+    .config(require('./feature-b.route.js').config)
+    .run(require('./feature-b.route.js').run)
     .name;
 
