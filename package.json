@@ -29,6 +29,7 @@
     "angular-translate-storage-local": "^2.7.2",
     "angular-ui-router": "^0.2.15",
     "compression": "^1.5.2",
+    "exports-loader": "^0.6.2",
     "express": "^4.13.3",
     "http-proxy": "^1.11.1",
     "jscs-loader": "^0.2.0"

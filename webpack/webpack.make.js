@@ -16,6 +16,8 @@ module.exports = function makeWebpackConfig(options) {
 
     config.context = srcDir;
 
+    config.cache = true;
+
     config.entry = {
         app: './app.js'
     };
@@ -24,7 +26,8 @@ module.exports = function makeWebpackConfig(options) {
         path: buildDir,
         publicPath: BUILD ? '/' : 'http://localhost:8080/',
         filename: BUILD ? '[name].[hash].js' : '[name].bundle.js',
-        chunkFilename: BUILD ? '[name].[hash].js' : '[name].bundle.js'
+        chunkFilename: BUILD ? '[name].[hash].js' : '[name].bundle.js',
+        jsonpCallback: 'a'
     };
 
     if (BUILD) {
@@ -34,18 +37,22 @@ module.exports = function makeWebpackConfig(options) {
     }
 
     config.module = {
+        noParse: [],
         preLoaders: [],
         loaders: [
             {
                 test: /\.js$/,
-                loaders: ['ng-annotate','jscs-loader'],
+                loaders: [
+                    'ng-annotate',
+                    'jscs-loader'
+                ],
                 exclude: /node_modules/
             },
             {
                 test: /\.(jpe?g|png|gif|svg)$/i,
                 loaders: [
                     'url-loader?limit=10000',
-                    'image-webpack?bypassOnDebug&optimizationLevel=7&interlaced=false&verbose=true'
+                    'image-webpack?bypassOnDebug&optimizationLevel=7&interlaced=false&verbose=false'
                 ]
             },
             {
@@ -80,6 +87,7 @@ module.exports = function makeWebpackConfig(options) {
             allChunks: true
         }),
         new webpack.ProvidePlugin({
+            angular: 'exports?window.angular!angular',
             $: 'jquery',
             jQuery: 'jquery',
             _: 'lodash'
