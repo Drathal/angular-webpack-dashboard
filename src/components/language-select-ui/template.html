@@ -1,0 +1,20 @@
+<md-menu>
+
+    <md-button aria-label="Open phone interactions menu" class="md-icon-button" ng-click="ctrl.openLanguageMenu($mdOpenMenu, $event)">
+        <md-icon md-font-set="material-icons">language</md-icon>
+    </md-button>
+
+    <md-menu-content width="4">
+        <md-menu-item>
+            <md-button ng-click="ctrl.changeLanguage('de')">
+                <span class="flag-icon flag-icon-de"></span>&nbsp;{{ 'APP.LANGUAGES.GERMAN' | translate }}
+            </md-button>
+        </md-menu-item>
+        <md-menu-item>
+            <md-button ng-click="ctrl.changeLanguage('en')">
+                <span class="flag-icon flag-icon-us"></span>&nbsp;{{ 'APP.LANGUAGES.ENGLISH' | translate }}
+            </md-button>
+        </md-menu-item>
+    </md-menu-content>
+
+</md-menu>

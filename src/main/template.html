@@ -1,16 +1,23 @@
 <md-sidenav layout="column" class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$mdMedia('gt-md')" tabindex="-1">
+
     <md-toolbar>
         <div class="md-toolbar-tools">
+
             <img ng-src="{{ ::app.miniLogoUrl }}" style="width:30px;"/>
             <h1 flex>&nbsp;{{ ::app.title }}</h1>
+
         </div>
     </md-toolbar>
+
     <md-content ui-view="left-content" role="navigation" flex md-scroll-y></md-content>
+
 </md-sidenav>
 
 <div layout="column" class="relative" layout-fill role="main">
+
     <md-toolbar>
         <div class="main-toolbar md-toolbar-tools">
+
             <span ui-view="toolbar-before"> </span>
             <button class="md-button md-icon-button" ng-click="app.toggleSidebar()" hide-gt-md aria-label="Show Menu" tabindex="0">
                 <md-icon md-font-set="material-icons">menu</md-icon>
@@ -18,28 +25,14 @@
             <span ui-view="toolbar-title"></span>
             <span ui-view="toolbar-after"> </span>
 
-            <md-menu>
-                <md-button aria-label="Open phone interactions menu" class="md-icon-button" ng-click="app.openLanguageMenu($mdOpenMenu, $event)">
-                    <md-icon md-font-set="material-icons">language</md-icon>
-                </md-button>
-                <md-menu-content width="4">
-                    <md-menu-item>
-                        <md-button ng-click="app.changeLanguage('de')">
-                            <span class="flag-icon flag-icon-de  "></span>&nbsp;{{ 'APP.LANGUAGES.GERMAN' | translate }}
-                        </md-button>
-                    </md-menu-item>
-                    <md-menu-item>
-                        <md-button ng-click="app.changeLanguage('en')">
-                            <span class="flag-icon flag-icon-us  "></span>&nbsp;{{ 'APP.LANGUAGES.ENGLISH' | translate }}
-                        </md-button>
-                    </md-menu-item>
-                </md-menu-content>
-            </md-menu>
+            <ui-language-select></ui-language-select>
 
         </div>
     </md-toolbar>
+
     <md-content ui-view flex md-scroll-y >
         <p><md-icon md-font-set="material-icons" class="md-accent">android</md-icon> Test Iconfont</p>
     </md-content>
+
 </div>
 
