@@ -1,4 +1,4 @@
-var CounterModule = require('../module').component;
+var CounterCtrl = require('./counter.ctrl');
 
 describe('components', function () {
     describe('counter ui', function () {
@@ -6,8 +6,7 @@ describe('components', function () {
         var controller;
 
         before(function () {
-            var module = new CounterModule();
-            controller = new module.controller();
+            controller = new CounterCtrl();
         });
 
         it('should have a demo property', function () {
