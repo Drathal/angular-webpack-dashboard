@@ -1,7 +1,15 @@
 var angular = require('angular');
-require('./index.scss');
+require('./userinfo.scss');
 
 module.exports = angular
     .module('component.ui.userInfo', [])
-    .directive(require('./module').name, require('./module').component)
+    .directive('uiUserInfo', function () {
+        return {
+            scope: {},
+            controller: require('./userinfo.ctrl.js'),
+            controllerAs: 'userInfoController',
+            bindToController: true,
+            template: require('./userinfo.html')
+        };
+    })
     .name;

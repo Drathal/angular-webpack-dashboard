@@ -1,4 +1,4 @@
-var Module = require('../module.js').component;
+var UserInfoCtrl = require('./userinfo.ctrl');
 
 describe('components', function () {
     describe('user info', function () {
@@ -6,8 +6,7 @@ describe('components', function () {
         var controller;
 
         before(function () {
-            var module = new Module();
-            controller = new module.controller();
+            controller = new UserInfoCtrl();
         });
 
         it('should have a default name', function () {
