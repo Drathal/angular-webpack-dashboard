@@ -1,7 +1,5 @@
-module.exports.name = 'ctrl';
+module.exports = function() {
 
-module.exports.controller = function() {
-
-    this.property = 'My little Property';
+    this.property = 'My little Property 2';
 
 };

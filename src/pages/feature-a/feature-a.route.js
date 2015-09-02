@@ -11,9 +11,17 @@ module.exports.config = /*@ngInject*/ function ($stateProvider, translationLoade
                 template: '{{ "FEATUREA.HEADING" | translate }}'
             },
             '@': {
-                controller: require('./feature-a.ctrl.js').controller,
-                controllerAs: require('./feature-a.ctrl.js').name,
-                template: template
+                controller: function ($scope, data) {
+                    this.data = data;
+                },
+
+                controllerAs: 'featureAState',
+                template: '<feature-a data="featureAState.data"></feature-a>',
+                resolve: {
+                    data: function () {
+                        return {sample: 'sample resolved Data'};
+                    }
+                }
             }
         }
     });
