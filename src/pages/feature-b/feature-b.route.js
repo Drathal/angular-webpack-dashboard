@@ -1,5 +1,3 @@
-var template = require('./feature-b.html');
-
 module.exports.config = /*@ngInject*/ function($stateProvider, translationLoaderProvider) {
 
     translationLoaderProvider.add('featureb', __dirname);
@@ -11,9 +9,7 @@ module.exports.config = /*@ngInject*/ function($stateProvider, translationLoader
                 template: '{{ "FEATUREB.HEADING" | translate }}'
             },
             '@': {
-                controller: require('./feature-b.ctrl.js').controller,
-                controllerAs: require('./feature-b.ctrl.js').name,
-                template: template
+                template: '<feature-b></feature-b>'
             }
         }
     });

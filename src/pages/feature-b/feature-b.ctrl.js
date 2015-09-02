@@ -1,6 +1,4 @@
-module.exports.name = 'ctrl';
-
-module.exports.controller = function() {
+module.exports = function() {
 
     this.property = 'Feature B Controller Property';
 

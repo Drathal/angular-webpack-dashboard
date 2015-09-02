@@ -20,6 +20,14 @@ module.exports = angular
             }
         };
     })
+    .directive('featureB', function () {
+        return {
+            controller: require('./feature-b.ctrl.js'),
+            controllerAs: 'ctrl',
+            bindToController: true,
+            template: require('./feature-b.html')
+        };
+    })
     .config(require('./feature-b.route.js').config)
     .run(require('./feature-b.route.js').run)
     .name;
