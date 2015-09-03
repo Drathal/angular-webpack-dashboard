@@ -1,23 +1,23 @@
 module.exports.config = /*@ngInject*/ function ($stateProvider, translationLoaderProvider) {
 
-    translationLoaderProvider.add('featurea', __dirname);
+    translationLoaderProvider.add('charttest', __dirname);
 
-    $stateProvider.state('app.feature-a', {
-        url: '/feature-a',
+    $stateProvider.state('app.charttest', {
+        url: '/charttest',
         views: {
             'toolbar-title@': {
-                template: '{{ "FEATUREA.HEADING" | translate }}'
+                template: '{{ "CHARTTEST.HEADING" | translate }}'
             },
             '@': {
                 controller: function ($scope, data) {
                     this.data = data;
                 },
 
-                controllerAs: 'featureAState',
-                template: '<div class="md-whiteframe-z1 white" layout-margin ><feature-a data="featureAState.data"></feature-a></div>',
+                controllerAs: 'chartTestState',
+                template: require('./chart-test.page.html'),
                 resolve: {
                     data: function () {
-                        return {sample: 'sample resolved Data'};
+                        return {sample: 1};
                     }
                 }
             }
@@ -29,9 +29,9 @@ module.exports.config = /*@ngInject*/ function ($stateProvider, translationLoade
 module.exports.run = /*@ngInject*/ function (menuService) {
 
     menuService.addMenu({
-        name: 'FEATUREA.HOME',
-        icon: 'home',
-        state: 'app.feature-a',
+        name: 'CHARTTEST.HOME',
+        icon: 'equalizer',
+        state: 'app.charttest',
         type: 'link'
     });
 

@@ -9,7 +9,7 @@ module.exports.config = /*@ngInject*/ function($stateProvider, translationLoader
                 template: '{{ "FEATUREB.HEADING" | translate }}'
             },
             '@': {
-                template: '<feature-b></feature-b>'
+                template: '<div class="md-whiteframe-z1 white" layout-margin><feature-b></feature-b></div>'
             }
         }
     });
