@@ -14,7 +14,7 @@ module.exports.config = /*@ngInject*/ function ($stateProvider, translationLoade
                 },
 
                 controllerAs: 'featureCState',
-                template: '<feature-a data="featureCState.data"></feature-a><feature-b></feature-b>',
+                template: require('./feature-c.page.html'),
                 resolve: {
                     data: function () {
                         return {sample: 'here we resolve Other Data !'};
