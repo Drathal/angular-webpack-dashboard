@@ -5,4 +5,8 @@ ui-menu[layout="column"] .md-button {
     border-radius: 0;
     border-bottom: 1px solid #ddd;
     text-transform: none;
+
+    &.active {
+        background-color: #ddd;
+    }
 }
