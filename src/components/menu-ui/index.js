@@ -1,4 +1,5 @@
 var angular = require('angular');
+require('./menu.scss');
 
 module.exports = angular
     .module('component.ui.menu', [

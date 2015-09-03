@@ -20,7 +20,7 @@ module.exports.run = /*@ngInject*/ function(menuService) {
 
     menuService.addMenu({
         name: 'FEATUREB.HOME',
-        icon: 'icon-home',
+        icon: 'adjust',
         state: 'app.feature-b',
         type: 'link',
         priority: 2.2

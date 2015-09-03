@@ -1,3 +1,6 @@
-<ul class="ui-menu-horizontal">
-    <li ng-repeat="menuItem in ctrl.menuItems track by menuItem.state" ui-sref-active="active"><a ui-sref="{{ ::menuItem.state }}">{{ menuItem.name | translate }}</a></li>
-</ul>
+<md-button ng-repeat="menuItem in ctrl.menuItems track by menuItem.state"
+           ui-sref="{{ ::menuItem.state }}"
+           ui-sref-active="active">
+    <md-icon md-font-set="material-icons">{{ ::menuItem.icon }}</md-icon>
+    <span>{{ menuItem.name | translate }}</span>
+</md-button>
