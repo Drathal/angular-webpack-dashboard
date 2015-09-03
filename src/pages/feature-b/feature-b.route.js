@@ -22,8 +22,7 @@ module.exports.run = /*@ngInject*/ function(menuService) {
         name: 'FEATUREB.HOME',
         icon: 'adjust',
         state: 'app.feature-b',
-        type: 'link',
-        priority: 2.2
+        type: 'link'
     });
 
 };

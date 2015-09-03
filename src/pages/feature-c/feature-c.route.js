@@ -1,23 +1,23 @@
 module.exports.config = /*@ngInject*/ function ($stateProvider, translationLoaderProvider) {
 
-    translationLoaderProvider.add('featurea', __dirname);
+    translationLoaderProvider.add('featurec', __dirname);
 
-    $stateProvider.state('app.feature-a', {
-        url: '/feature-a',
+    $stateProvider.state('app.feature-c', {
+        url: '/feature-c',
         views: {
             'toolbar-title@': {
-                template: '{{ "FEATUREA.HEADING" | translate }}'
+                template: '{{ "FEATUREC.HEADING" | translate }}'
             },
             '@': {
                 controller: function ($scope, data) {
                     this.data = data;
                 },
 
-                controllerAs: 'featureAState',
-                template: '<feature-a data="featureAState.data"></feature-a>',
+                controllerAs: 'featureCState',
+                template: '<feature-a data="featureCState.data"></feature-a><feature-b></feature-b>',
                 resolve: {
                     data: function () {
-                        return {sample: 'sample resolved Data'};
+                        return {sample: 'here we resolve Other Data !'};
                     }
                 }
             }
@@ -29,9 +29,9 @@ module.exports.config = /*@ngInject*/ function ($stateProvider, translationLoade
 module.exports.run = /*@ngInject*/ function (menuService) {
 
     menuService.addMenu({
-        name: 'FEATUREA.HOME',
-        icon: 'home',
-        state: 'app.feature-a',
+        name: 'FEATUREC.HOME',
+        icon: 'dashboard',
+        state: 'app.feature-c',
         type: 'link'
     });
 
