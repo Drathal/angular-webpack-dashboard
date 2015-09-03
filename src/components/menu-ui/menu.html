@@ -1,1 +1,3 @@
-<li ng-repeat="menuItem in ctrl.menuItems track by menuItem.state" ui-sref-active="active"><a ui-sref="{{ ::menuItem.state }}">{{ menuItem.name | translate }}</a></li>
+<ul class="ui-menu-horizontal">
+    <li ng-repeat="menuItem in ctrl.menuItems track by menuItem.state" ui-sref-active="active"><a ui-sref="{{ ::menuItem.state }}">{{ menuItem.name | translate }}</a></li>
+</ul>
