@@ -3,7 +3,9 @@
     <h1>{{ 'FEATUREA.HEADING' | translate }}</h1>
 
     <span ng-bind-html=" 'FEATUREA.INTROTEXT' | translate:ctrl | htmlSafe  "></span>
-    <pre>Resolved Data: {{ ctrl.data }} </pre>
+    <pre>Resolved Data:
+{{ ctrl.data }}
+    </pre>
 
     <md-button class="md-raised md-primary" ui-sref="app.feature-b">{{ 'FEATUREA.TRYFEATUREB' | translate }}</md-button>
 
