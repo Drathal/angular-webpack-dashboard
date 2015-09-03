@@ -45,7 +45,8 @@ module.exports = /* @ngInject */ function ($urlRouterProvider, $stateProvider, $
         A100: '#b3d5da',
         A200: '#80b9c2',
         A400: '#2a8999',
-        A700: '#005664'
+        A700: '#005664',
+        contrastLightColors: ['500','600','700','800','900']
     });
 
     $mdThemingProvider.definePalette('Orange', {
