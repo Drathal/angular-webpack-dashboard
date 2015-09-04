@@ -13,7 +13,8 @@ module.exports = function karmaConfig(config) {
 
         reporters: [
             'spec',
-            'coverage'
+            'coverage',
+            'coveralls'
         ],
 
         files: [
@@ -55,6 +56,7 @@ module.exports = function karmaConfig(config) {
         plugins: [
             'karma-webpack',
             'karma-coverage',
+            'karma-coveralls',
             'karma-mocha',
             'karma-sinon-chai',
             'karma-spec-reporter',

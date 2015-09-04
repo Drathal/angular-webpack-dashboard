@@ -1,6 +1,6 @@
 # Just another Angular Dashboard 
 
-[![Build Status](https://travis-ci.org/Drathal/angular-webpack-dashboard.svg)](https://travis-ci.org/Drathal/angular-webpack-dashboard) [![Dependencies](https://david-dm.org/Drathal/angular-webpack-dashboard.svg)](https://david-dm.org/Drathal/angular-webpack-dashboard)
+[![Build Status](https://travis-ci.org/Drathal/angular-webpack-dashboard.svg)](https://travis-ci.org/Drathal/angular-webpack-dashboard) [![Dependencies](https://david-dm.org/Drathal/angular-webpack-dashboard.svg)](https://david-dm.org/Drathal/angular-webpack-dashboard) [![Coverage Status](https://coveralls.io/repos/Drathal/angular-webpack-dashboard/badge.svg?branch=master&service=github)](https://coveralls.io/github/Drathal/angular-webpack-dashboard?branch=master)
 
 A little frontend to play around with: angular 1.x, webpack and other nice things.
 
