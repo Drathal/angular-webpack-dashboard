@@ -7,6 +7,7 @@ var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 var srcDir = path.join(__dirname, '../src');
 var buildDir = path.join(__dirname, '../build');
+var port = 8080;
 
 module.exports = function makeWebpackConfig(options) {
 
@@ -24,7 +25,7 @@ module.exports = function makeWebpackConfig(options) {
 
     config.output = {
         path: buildDir,
-        publicPath: BUILD ? '/' : 'http://localhost:8080/',
+        publicPath: BUILD ? '/' : 'http://localhost:' + port + '/',
         filename: BUILD ? '[name].[hash].js' : '[name].bundle.js',
         chunkFilename: BUILD ? '[name].[hash].js' : '[name].bundle.js',
         jsonpCallback: 'a'
