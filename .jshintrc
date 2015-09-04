@@ -13,13 +13,9 @@
     "sub": true,
     "browser": true,
     "loopfunc": false,
+    "mocha": true,
     "globals": {
-        "describe": false,
-        "it": false,
-        "before": false,
-        "beforeEach": false,
-        "after": false,
-        "afterEach": false,
-        "expect": false
+        "expect": false,
+        "should": false
     }
 }
