@@ -1,5 +1,7 @@
 # Just another Angular Dashboard 
 
+[![Join the chat at https://gitter.im/Drathal/angular-webpack-dashboard](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/Drathal/angular-webpack-dashboard?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 [![Build Status](https://travis-ci.org/Drathal/angular-webpack-dashboard.svg)](https://travis-ci.org/Drathal/angular-webpack-dashboard) 
 [![Codacy Badge](https://api.codacy.com/project/badge/1f843886f2c74fc5a7ffee387077ddf0)](https://www.codacy.com/app/drathal/angular-webpack-dashboard)
 [![Coverage Status](https://coveralls.io/repos/Drathal/angular-webpack-dashboard/badge.svg?branch=master&service=github)](https://coveralls.io/github/Drathal/angular-webpack-dashboard?branch=master)
