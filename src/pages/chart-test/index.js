@@ -1,6 +1,6 @@
 var angular = require('angular');
 require('imports?this=>window!chart.js');
-require('angular-chart.js');
+require('imports?define=>false!angular-chart.js');
 require('../../../node_modules/angular-chart.js/dist/angular-chart.css');
 
 module.exports = angular
