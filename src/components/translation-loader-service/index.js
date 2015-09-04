@@ -56,19 +56,23 @@ module.exports = angular
                  * todo: bundle all requests for the same language (make one require with multiple bundle calls)
                  */
                 for (langPart in self.parts) {
-                    self.handler.push(function() {
-                        var k;
-                        var d = $q.defer();
-                        require('bundle!../../' + self.parts[langPart]._where + '/i18n/' + options.key + '.json')(function(data) {
-                            for (k in data) {
-                                self.translations[options.key][k] = data[k];
-                            }
+                    if (self.parts.hasOwnProperty(langPart)) {
+                        self.handler.push(function () {
+                            var k;
+                            var d = $q.defer();
+                            require('bundle!../../' + self.parts[langPart]._where + '/i18n/' + options.key + '.json')(function (data) {
+                                for (k in data) {
+                                    if (data.hasOwnProperty(k)) {
+                                        self.translations[options.key][k] = data[k];
+                                    }
+                                }
 
-                            d.resolve(data[k]);
-                        });
+                                d.resolve(data[k]);
+                            });
 
-                        return d.promise;
-                    }());
+                            return d.promise;
+                        }());
+                    }
                 }
 
                 $q.all(self.handler).then(function() {

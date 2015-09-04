@@ -45,6 +45,7 @@ module.exports = function makeWebpackConfig(options) {
                 test: /\.js$/,
                 loaders: [
                     'ng-annotate',
+                    'jshint-loader',
                     'jscs-loader'
                 ],
                 exclude: /node_modules/

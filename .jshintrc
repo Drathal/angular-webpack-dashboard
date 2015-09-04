@@ -1,0 +1,15 @@
+{
+    "bitwise": true,
+    "noarg": true,
+    "nonew": true,
+    "boss": true,
+    "eqnull": true,
+    "globalstrict": true,
+    "loopfunc": true,
+    "undef": true,
+    "forin": true,
+    "node": true,
+    "strict": false,
+    "sub": true,
+    "browser": true
+}

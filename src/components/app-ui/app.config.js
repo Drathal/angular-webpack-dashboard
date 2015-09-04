@@ -11,7 +11,9 @@ module.exports = /* @ngInject */ function ($urlRouterProvider, $stateProvider, $
 
     var languageKeys = [];
     for (var lang in APPCONFIG.languages) {
-        languageKeys.push(APPCONFIG.languages[lang].key);
+        if (APPCONFIG.languages.hasOwnProperty(lang)) {
+            languageKeys.push(APPCONFIG.languages[lang].key);
+        }
     }
 
     $translateProvider
