@@ -12,12 +12,6 @@ module.exports.config = /*@ngInject*/ function ($stateProvider, translationLoade
                 controller: function ($scope, data1, data2, $timeout, $interval) {
 
                     var self = this;
-                    var charts = [];
-
-                    $scope.$on('create', function (event, chart) {
-                        //( charts.push(chart);
-
-                    });
 
                     var r = function () {
                         return Math.floor((Math.random() * 100) + 1);

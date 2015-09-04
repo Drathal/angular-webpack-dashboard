@@ -61,7 +61,7 @@ module.exports = function(wallaby) {
 
             window.expect = chai.expect;
             window.assert = chai.assert;
-            var should = chai.should();
+            window.should = chai.should();
 
             window.__moduleBundler.loadTests();
         }
