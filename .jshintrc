@@ -12,5 +12,14 @@
     "strict": false,
     "sub": true,
     "browser": true,
-    "loopfunc": false
+    "loopfunc": false,
+    "globals": {
+        "describe": false,
+        "it": false,
+        "before": false,
+        "beforeEach": false,
+        "after": false,
+        "afterEach": false,
+        "expect": false
+    }
 }
