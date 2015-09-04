@@ -38,7 +38,6 @@
     "http-proxy": "^1.11.1"
   },
   "devDependencies": {
-    "angular-chart.js": "^0.8.0",
     "angular-mocks": "^1.4.1",
     "autoprefixer-core": "^5.2.0",
     "bardjs": "^0.1.8",
