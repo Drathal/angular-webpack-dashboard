@@ -8,14 +8,14 @@ A little frontend to play around with: angular 1.x, webpack and other nice thing
   * [Java](https://java.com/download/) only for selenium tests
    
 ## install
-    git clone git@github.com:Drathal/angular-webpack-dashboard.git
+    git clone https://github.com/Drathal/angular-webpack-dashboard.git
     cd angular-webpack-dashboard
     npm install
 
 ## build & start
 ### production
     npm run build
-    npm start
+    npm run start
     
 Open in Browser at: localhost:8888    
     
