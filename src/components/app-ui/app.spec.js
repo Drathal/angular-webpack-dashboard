@@ -5,6 +5,7 @@ describe('app', function () {
 
         var $translate;
         var $scope;
+        var $mdSidenav;
 
         before(function () {
             $translate = function (translations) {
@@ -19,7 +20,16 @@ describe('app', function () {
                 };
             };
 
-            $scope = new Controller($translate);
+            $mdSidenav = function (where) {
+                return {
+                    toggle: function () {
+                        $scope.toggleCalled = true;
+                        $scope.toggleWhere = where;
+                    }
+                };
+            };
+
+            $scope = new Controller($translate, $mdSidenav);
         });
 
         it('should have a mini logo', function () {
@@ -28,6 +38,16 @@ describe('app', function () {
 
         it('should translate the title', function () {
             expect($scope.title).to.equal('test_translation');
+        });
+
+        it('should have a toggleSidebar function', function () {
+            expect($scope.toggleSidebar).to.be.a('function');
+        });
+
+        it('should toggle the sidebar', function () {
+            $scope.toggleSidebar();
+            expect($scope.toggleCalled).to.equal(true);
+            expect($scope.toggleWhere).to.be.a('string');
         });
 
     });
