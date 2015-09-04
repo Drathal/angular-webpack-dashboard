@@ -4,6 +4,7 @@
 [![Codacy Badge](https://api.codacy.com/project/badge/1f843886f2c74fc5a7ffee387077ddf0)](https://www.codacy.com/app/drathal/angular-webpack-dashboard)
 [![Coverage Status](https://coveralls.io/repos/Drathal/angular-webpack-dashboard/badge.svg?branch=master&service=github)](https://coveralls.io/github/Drathal/angular-webpack-dashboard?branch=master)
 [![Dependencies](https://david-dm.org/Drathal/angular-webpack-dashboard.svg)](https://david-dm.org/Drathal/angular-webpack-dashboard)
+[![Join the chat at https://gitter.im/Drathal/angular-webpack-dashboard](https://img.shields.io/badge/%E2%8A%AA%20GITTER%20-JOIN%20CHAT%20%E2%86%92-brightgreen.svg?style=flat)](https://gitter.im/Drathal/angular-webpack-dashboard)
 
 A little frontend to play around with: angular 1.x, material design, webpack and other nice things.
 
