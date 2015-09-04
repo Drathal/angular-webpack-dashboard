@@ -1,6 +1,6 @@
 # Just another Angular Dashboard 
 
-[![Build Status](https://travis-ci.org/Drathal/angular-webpack-dashboard.svg)](https://travis-ci.org/Drathal/angular-webpack-dashboard)
+[![Build Status](https://travis-ci.org/Drathal/angular-webpack-dashboard.svg)](https://travis-ci.org/Drathal/angular-webpack-dashboard) [![Dependencies](https://david-dm.org/Drathal/angular-webpack-dashboard.svg)](https://david-dm.org/Drathal/angular-webpack-dashboard)
 
 A little frontend to play around with: angular 1.x, webpack and other nice things.
 
