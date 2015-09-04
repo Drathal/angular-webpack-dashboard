@@ -3,3 +3,4 @@ build
 coverage
 .idea/workspace.xml
 npm-debug.log
+phantomjsdriver.log

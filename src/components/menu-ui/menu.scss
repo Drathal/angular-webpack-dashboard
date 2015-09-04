@@ -1,0 +1,12 @@
+ui-menu[layout="column"] .md-button {
+    text-align: left;
+    margin: 0;
+    padding-left: 12px;
+    border-radius: 0;
+    border-bottom: 1px solid #ddd;
+    text-transform: none;
+
+    &.active {
+        background-color: #ddd;
+    }
+}

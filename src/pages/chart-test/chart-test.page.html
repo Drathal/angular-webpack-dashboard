@@ -1,0 +1,43 @@
+<style>
+    canvas{
+        width: 100% !important;
+        max-height: 300px;
+        min-height: 300px;
+
+        height: auto !important;
+    }
+
+    md-card-content h2 {
+        margin-top: 0;
+    }
+</style>
+
+<div layout="row" layout-md="column" layout-sm="column" layout-margin>
+
+    <md-card class="white md-whiteframe-z1" flex>
+        <md-card-content flex style="overflow:hidden; max-width:100%">
+            <h2>Card 1 headline</h2>
+            <canvas id="line" class="chart chart-line"
+                    chart-data="chartTestState.data1.data"
+                    chart-labels="chartTestState.data1.labels"
+                    chart-series="chartTestState.data1.series"
+                    chart-options="chartTestState.data1.options"
+                    chart-legend="false"
+                    chart-click="onClick"></canvas>
+        </md-card-content>
+    </md-card>
+
+    <md-card class="white md-whiteframe-z1" flex>
+        <md-card-content flex style="overflow:hidden; max-width:100%">
+            <h2>Card 2 headline</h2>
+            <canvas id="line" class="chart chart-line"
+                    chart-data="chartTestState.data2.data"
+                    chart-labels="chartTestState.data2.labels"
+                    chart-series="chartTestState.data2.series"
+                    chart-options="chartTestState.data2.options"
+                    chart-legend="false"
+                    chart-click="onClick"></canvas>
+        </md-card-content>
+    </md-card>
+
+</div>

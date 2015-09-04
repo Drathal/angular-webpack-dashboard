@@ -1,10 +1,11 @@
 var angular = require('angular');
+require('./menu.scss');
 
 module.exports = angular
     .module('component.ui.menu', [
         require('../menu-service')
     ])
-    .directive('uiStateMenu', function() {
+    .directive('uiMenu', function() {
         return {
             controller: require('./menu.ctrl'),
             controllerAs: 'ctrl',

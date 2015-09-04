@@ -4,7 +4,7 @@
     <inspection_tool class="HtmlUnknownAttribute" enabled="true" level="WARNING" enabled_by_default="true">
       <option name="myValues">
         <value>
-          <list size="7">
+          <list size="10">
             <item index="0" class="java.lang.String" itemvalue="layout-fill" />
             <item index="1" class="java.lang.String" itemvalue="layout" />
             <item index="2" class="java.lang.String" itemvalue="flex" />
@@ -12,6 +12,9 @@
             <item index="4" class="java.lang.String" itemvalue="hide-gt-md" />
             <item index="5" class="java.lang.String" itemvalue="hide-sm" />
             <item index="6" class="java.lang.String" itemvalue="hide-md" />
+            <item index="7" class="java.lang.String" itemvalue="layout-md" />
+            <item index="8" class="java.lang.String" itemvalue="layout-sm" />
+            <item index="9" class="java.lang.String" itemvalue="layout-margin" />
           </list>
         </value>
       </option>
@@ -20,7 +23,7 @@
     <inspection_tool class="HtmlUnknownTag" enabled="true" level="WARNING" enabled_by_default="true">
       <option name="myValues">
         <value>
-          <list size="8">
+          <list size="9">
             <item index="0" class="java.lang.String" itemvalue="nobr" />
             <item index="1" class="java.lang.String" itemvalue="noembed" />
             <item index="2" class="java.lang.String" itemvalue="comment" />
@@ -29,6 +32,7 @@
             <item index="5" class="java.lang.String" itemvalue="script" />
             <item index="6" class="java.lang.String" itemvalue="md-menu-item" />
             <item index="7" class="java.lang.String" itemvalue="md-menu-content" />
+            <item index="8" class="java.lang.String" itemvalue="menu-link" />
           </list>
         </value>
       </option>

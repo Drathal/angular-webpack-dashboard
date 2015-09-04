@@ -1,6 +1,6 @@
 <md-sidenav layout="column" class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$mdMedia('gt-md')" tabindex="-1">
 
-    <md-toolbar>
+    <md-toolbar class="md-whiteframe-z2">
         <div class="md-toolbar-tools">
 
             <img ng-src="{{ ::app.miniLogoUrl }}" style="width:30px;"/>
@@ -9,20 +9,22 @@
         </div>
     </md-toolbar>
 
-    <md-content ui-view="left-content" role="navigation" flex md-scroll-y></md-content>
+    <md-content ui-view="left-content" role="navigation" flex md-scroll-y>
+        <ui-menu layout="column"></ui-menu>
+    </md-content>
 
 </md-sidenav>
 
 <div layout="column" class="relative" layout-fill role="main">
 
-    <md-toolbar>
+    <md-toolbar class="md-whiteframe-z2">
         <div class="main-toolbar md-toolbar-tools">
 
             <span ui-view="toolbar-before"> </span>
             <button class="md-button md-icon-button" ng-click="app.toggleSidebar()" hide-gt-md aria-label="Show Menu" tabindex="0">
                 <md-icon md-font-set="material-icons">menu</md-icon>
             </button>
-            <h2><span hide-sm hide-md class="toolbar-title-padding"></span><span ui-view="toolbar-title"></span></h2>
+            <h2 hide-sm><span hide-sm hide-md class="toolbar-title-padding"></span><span ui-view="toolbar-title"></span></h2>
             <span ui-view="toolbar-after"> </span>
 
             <ui-user-info></ui-user-info>

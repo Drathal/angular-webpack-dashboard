@@ -9,7 +9,7 @@ module.exports.config = /*@ngInject*/ function($stateProvider, translationLoader
                 template: '{{ "FEATUREB.HEADING" | translate }}'
             },
             '@': {
-                template: '<feature-b></feature-b>'
+                template: '<div class="md-whiteframe-z1 white" layout-margin><feature-b></feature-b></div>'
             }
         }
     });
@@ -20,10 +20,9 @@ module.exports.run = /*@ngInject*/ function(menuService) {
 
     menuService.addMenu({
         name: 'FEATUREB.HOME',
-        icon: 'icon-home',
+        icon: 'adjust',
         state: 'app.feature-b',
-        type: 'link',
-        priority: 2.2
+        type: 'link'
     });
 
 };
