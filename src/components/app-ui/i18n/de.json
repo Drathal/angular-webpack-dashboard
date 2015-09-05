@@ -1,7 +1,6 @@
 {
     "APP": {
         "LANGUAGE": "Sprache",
-        "NAVTITLE": "Docker Registry",
         "SIDEBAR_TITLE": "Dashboard"
     }
 }

@@ -1,8 +1,7 @@
-var Controller = require('./app.ctrl');
-
 describe('app', function () {
     describe('controller', function () {
 
+        var Controller = require('./app.ctrl');
         var $translate;
         var $scope;
         var $mdSidenav;
@@ -51,4 +50,25 @@ describe('app', function () {
         });
 
     });
+
+    describe('directive', function () {
+
+        var element;
+        var $scope;
+
+        beforeEach(angular.mock.module(require('./index.js')));
+        beforeEach(inject(function ($rootScope, $compile) {
+            element = angular.element('<app></app>');
+            $scope = $rootScope;
+            $compile(element)($scope);
+            $scope.$digest();
+        }));
+
+        it('should render the app directive', function () {
+            expect($(element).find('md-sidenav.md-sidenav-left').length).to.equal(1);
+            expect($(element).find('div[role="main"]').length).to.equal(1);
+        });
+
+    });
+
 });

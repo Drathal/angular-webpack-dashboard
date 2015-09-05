@@ -1,4 +1,5 @@
 var angular = require('angular');
+var _ = require('lodash');
 
 module.exports = angular
     .module('component.service.translationLoader', [])
@@ -32,28 +33,21 @@ module.exports = angular
     .provider('translationLoader', function () {
 
         var self = this;
-        self.parts = {};
+        self.parts = [];
         self.translations = {};
         self.handler = [];
 
         this.add = function (part, where) {
-            self.parts[part] = {
-                _where: where.replace(/\\/g, '/'),
-                _name: part
-            };
+            self.parts.push(where.replace(/\\/g, '/'));
         };
 
-        this.bundle = function (langPart, key, $q) {
-            var k;
+        this.bundle = function (where, key, $q) {
             var d = $q.defer();
-            require('bundle!../../' + self.parts[langPart]._where + '/i18n/' + key + '.json')(function (data) {
-                for (k in data) {
-                    if (data.hasOwnProperty(k)) {
-                        self.translations[key][k] = data[k];
-                    }
-                }
 
-                d.resolve(data[k]);
+            require.ensure([], function (require) {
+                require('bundle!../../' + where + '/i18n/' + key + '.json')(function (data) {
+                    d.resolve(data);
+                });
             });
 
             return d.promise;
@@ -63,17 +57,19 @@ module.exports = angular
 
             return function (options) {
                 var deferred = $q.defer();
-                var langPart;
+                var i;
 
                 self.translations[options.key] = {};
 
-                for (langPart in self.parts) {
-                    if (self.parts.hasOwnProperty(langPart)) {
-                        self.handler.push(self.bundle(langPart, options.key, $q));
-                    }
+                for (i = 0; i < self.parts.length; i++) {
+                    self.handler.push(self.bundle(self.parts[i], options.key, $q));
                 }
 
-                $q.all(self.handler).then(function () {
+                $q.all(self.handler).then(function (translation) {
+                    for (i = 0; i < translation.length; i++) {
+                        _.merge(self.translations[options.key], translation[i]);
+                    }
+
                     deferred.resolve(self.translations[options.key]);
                 });
 

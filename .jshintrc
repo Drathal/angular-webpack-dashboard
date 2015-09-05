@@ -14,8 +14,11 @@
     "browser": true,
     "loopfunc": false,
     "mocha": true,
+    "jquery" : true,
     "globals": {
         "expect": false,
-        "should": false
+        "should": false,
+        "inject": false,
+        "angular": true
     }
 }
