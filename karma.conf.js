@@ -18,11 +18,6 @@ module.exports = function karmaConfig(config) {
         ],
 
         files: [
-            /*
-            {pattern: 'node_modules/angular/angular.js', watched: false},
-            {pattern: 'node_modules/angular-mocks/angular-mocks.js', watched: false},
-            {pattern: 'node_modules/bardjs/dist/bard.js', watched: false},
-            */
             {pattern: 'webpack/test.bundle.js', watched: false}
         ],
 
@@ -33,12 +28,17 @@ module.exports = function karmaConfig(config) {
         browsers: ['PhantomJS'],
 
         captureTimeout: 60000,
+        browserDisconnectTimeout: 60000,
+        browserNoActivityTimeout: 200000,
 
         autoWatch: false,
-
         singleRun: true,
 
         webpack: webpackConfig,
+
+        webpackServer: {
+            noInfo: true
+        },
 
         coverageReporter: {
             reporters: [
@@ -47,10 +47,6 @@ module.exports = function karmaConfig(config) {
                 {type: 'cobertura', dir: 'coverage/', subdir: './'},
                 {type: 'lcovonly', dir: 'coverage/', subdir: './'}
             ]
-        },
-
-        webpackServer: {
-            noInfo: true
         },
 
         plugins: [
