@@ -10,11 +10,8 @@ module.exports = /* @ngInject */ function ($urlRouterProvider, $stateProvider, $
         });
 
     var languageKeys = [];
-    for (var lang in APPCONFIG.languages) {
-        /* istanbul ignore else  */
-        if (APPCONFIG.languages.hasOwnProperty(lang)) {
-            languageKeys.push(APPCONFIG.languages[lang].key);
-        }
+    for (var i = 0; i < APPCONFIG.languages.length; i++) {
+        languageKeys.push(APPCONFIG.languages[i].key);
     }
 
     $translateProvider
