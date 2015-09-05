@@ -27,13 +27,16 @@ module.exports.config = /*@ngInject*/ function ($stateProvider, translationLoade
                             [r(), r(), r(), r(), r(), r(), r()],
                             [r(), r(), r(), r(), r(), r(), r()]
                         ];
-
-                        self.data2.data = [
-                            [r(), r(), r(), r(), r(), r(), r()],
-                            [r(), r(), r(), r(), r(), r(), r()]
-                        ];
-
                     }, 5000);
+
+                    $interval(function () {
+                        self.data2.data[0].push(r());
+                        self.data2.data[0].shift(r());
+
+                        self.data2.data[1].push(r());
+                        self.data2.data[1].shift(r());
+
+                    }, 1000);
 
                 },
 
@@ -59,17 +62,17 @@ module.exports.config = /*@ngInject*/ function ($stateProvider, translationLoade
 
                     data2: function () {
                         return {
-                            labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+                            labels: ['-60','-55','-50','-45','-40','-35','-30', '-25', '-20', '-15', '-10', '-5', 'now'],
                             series: ['Series A', 'Series B'],
                             data: [
-                                [65, 59, 100, 81, 56, 55, 40],
-                                [28, 48, 40, 19, 0, 27, 90]
+                                [65, 59, 100, 81, 56, 55, 40,65, 59, 100, 81, 56, 55, 40],
+                                [28, 48, 40, 19, 0, 27, 90,28, 48, 40, 19, 0, 27, 90]
                             ],
                             options: {
                                 datasetFill: true,
                                 maintainAspectRatio: false,
                                 responsive: true,
-                                animation: true
+                                animation: false
                             }
                         };
                     }
