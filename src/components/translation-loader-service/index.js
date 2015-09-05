@@ -1,5 +1,6 @@
 var angular = require('angular');
 var _ = require('lodash');
+var loadAsync = require('./webpack.loadAsync');
 
 module.exports = angular
     .module('component.service.translationLoader', [])
@@ -9,22 +10,17 @@ module.exports = angular
         var self = this;
         self.parts = [];
         self.translations = {};
-        self.handler = [];
 
         this.add = function (where) {
             self.parts.push(where.replace(/\\/g, '/'));
         };
 
-        this.bundle = function (where, key, $q) {
-            var d = $q.defer();
+        this.addLang = function (result, lang, n, deferred) {
+            _.merge(self.translations[lang], result);
 
-            require.ensure([], function (require) {
-                require('bundle!../../' + where + '/i18n/' + key + '.json')(function (data) {
-                    d.resolve(data);
-                });
-            });
-
-            return d.promise;
+            if (n === self.parts.length - 1) {
+                deferred.resolve(self.translations[lang]);
+            }
         };
 
         this.$get = function ($q) {
@@ -36,16 +32,8 @@ module.exports = angular
                 self.translations[options.key] = {};
 
                 for (i = 0; i < self.parts.length; i++) {
-                    self.handler.push(self.bundle(self.parts[i], options.key, $q));
+                    loadAsync(self.parts[i], options.key, i, deferred, self.addLang);
                 }
-
-                $q.all(self.handler).then(function (translation) {
-                    for (i = 0; i < translation.length; i++) {
-                        _.merge(self.translations[options.key], translation[i]);
-                    }
-
-                    deferred.resolve(self.translations[options.key]);
-                });
 
                 return deferred.promise;
             };
