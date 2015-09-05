@@ -1,6 +1,6 @@
 module.exports = /*@ngInject*/ function () {
 
-    this.openLanguageMenu = function($mdOpenMenu, ev) {
+    this.openMenu = function($mdOpenMenu, ev) {
         $mdOpenMenu(ev);
     };
 
