@@ -16,6 +16,6 @@ module.exports = angular
         };
     })
     .config(function (translationLoaderProvider) {
-        translationLoaderProvider.add('userinfo-ui', __dirname);
+        translationLoaderProvider.add(__dirname);
     })
     .name;

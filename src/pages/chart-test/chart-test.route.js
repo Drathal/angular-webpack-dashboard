@@ -1,6 +1,6 @@
 module.exports.config = /*@ngInject*/ function ($stateProvider, translationLoaderProvider) {
 
-    translationLoaderProvider.add('charttest', __dirname);
+    translationLoaderProvider.add(__dirname);
 
     $stateProvider.state('app.charttest', {
         url: '/charttest',

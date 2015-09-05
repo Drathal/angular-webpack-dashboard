@@ -15,6 +15,6 @@ module.exports = angular
         };
     })
     .config(function (translationLoaderProvider) {
-        translationLoaderProvider.add('language-select-ui', __dirname);
+        translationLoaderProvider.add(__dirname);
     })
     .name;

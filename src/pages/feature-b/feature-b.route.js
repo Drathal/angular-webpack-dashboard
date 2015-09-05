@@ -1,6 +1,6 @@
 module.exports.config = /*@ngInject*/ function($stateProvider, translationLoaderProvider) {
 
-    translationLoaderProvider.add('featureb', __dirname);
+    translationLoaderProvider.add(__dirname);
 
     $stateProvider.state('app.feature-b', {
         url: '/feature-b',

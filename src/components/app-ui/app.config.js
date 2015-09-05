@@ -29,7 +29,7 @@ module.exports = /* @ngInject */ function ($urlRouterProvider, $stateProvider, $
         .determinePreferredLanguage()
         .useLocalStorage();
 
-    translationLoaderProvider.add('main', __dirname);
+    translationLoaderProvider.add(__dirname);
 
     cfpLoadingBarProvider.includeSpinner = true;
     cfpLoadingBarProvider.includeBar = true;

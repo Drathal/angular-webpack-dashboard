@@ -4,32 +4,6 @@ var _ = require('lodash');
 module.exports = angular
     .module('component.service.translationLoader', [])
 
-    .filter('htmlSafe', function ($sce) {
-        return function (htmlCode) {
-            return $sce['trustAsHtml'](htmlCode);
-        };
-    })
-
-    .directive('bindHtmlCompile', ['$compile', function ($compile) {
-        return {
-            restrict: 'A',
-            link: function (scope, element, attrs) {
-                scope.$watch(function () {
-                    return scope.$eval(attrs['bindHtmlCompile']);
-                }, function (value) {
-
-                    element.html(value && value.toString());
-                    var compileScope = scope;
-                    if (attrs['bindHtmlScope']) {
-                        compileScope = scope.$eval(attrs['bindHtmlScope']);
-                    }
-
-                    $compile(element.contents())(compileScope);
-                });
-            }
-        };
-    }])
-
     .provider('translationLoader', function () {
 
         var self = this;
@@ -37,7 +11,7 @@ module.exports = angular
         self.translations = {};
         self.handler = [];
 
-        this.add = function (part, where) {
+        this.add = function (where) {
             self.parts.push(where.replace(/\\/g, '/'));
         };
 
