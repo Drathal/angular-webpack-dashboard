@@ -52,7 +52,7 @@
     "requirePaddingNewLinesBeforeLineComments": {
         "allExcept": "firstAfterCurly"
     },
-    "requirePaddingNewLinesAfterBlocks": true,
+    "requirePaddingNewLinesAfterBlocks": false,
     "requireSemicolons": true,
     "safeContextKeyword": "self",
     "validateLineBreaks": "LF",

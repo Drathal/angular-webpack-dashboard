@@ -1,3 +1,5 @@
+require('./chart-test.scss');
+
 module.exports.config = /*@ngInject*/ function ($stateProvider, translationLoaderProvider) {
 
     translationLoaderProvider.add(__dirname);
@@ -9,7 +11,13 @@ module.exports.config = /*@ngInject*/ function ($stateProvider, translationLoade
                 template: '{{ "CHARTTEST.HEADING" | translate }}'
             },
             '@': {
-                controller: function ($scope, data1, data2, $timeout, $interval) {
+                controller: function ($scope, data1, data2, $timeout, $interval, $mdMedia, $window) {
+
+                    $scope.$watch(function() { return $mdMedia('gt-md'); }, function() {
+                        $timeout(function() {
+                            $window.dispatchEvent(new Event('resize'));
+                        }, 400);
+                    });
 
                     var self = this;
 
@@ -60,11 +68,11 @@ module.exports.config = /*@ngInject*/ function ($stateProvider, translationLoade
 
                     data2: function () {
                         return {
-                            labels: ['-60','-55','-50','-45','-40','-35','-30', '-25', '-20', '-15', '-10', '-5', 'now'],
+                            labels: ['-60', '-55', '-50', '-45', '-40', '-35', '-30', '-25', '-20', '-15', '-10', '-5', 'now'],
                             series: ['Series A', 'Series B'],
                             data: [
-                                [65, 59, 100, 81, 56, 55, 40,65, 59, 100, 81, 56, 55, 40],
-                                [28, 48, 40, 19, 0, 27, 90,28, 48, 40, 19, 0, 27, 90]
+                                [65, 59, 100, 81, 56, 55, 40, 65, 59, 100, 81, 56, 55, 40],
+                                [28, 48, 40, 19, 0, 27, 90, 28, 48, 40, 19, 0, 27, 90]
                             ],
                             options: {
                                 datasetFill: true,
