@@ -1,6 +1,8 @@
 {
     "CHARTTEST": {
-        "HOME" : "Chart",
-        "HEADING": "Chart test"
+        "HOME": "Chart",
+        "HEADING": "Chart test",
+        "CARD1-TITLE": "Animations Sample",
+        "CARD2-TITLE": "Last 60 Seconds"
     }
 }

@@ -13,7 +13,7 @@ module.exports.config = /*@ngInject*/ function ($stateProvider, translationLoade
 
                     var self = this;
 
-                    var r = function () {
+                    var random = function () {
                         return Math.floor((Math.random() * 100) + 1);
                     };
 
@@ -24,18 +24,16 @@ module.exports.config = /*@ngInject*/ function ($stateProvider, translationLoade
 
                     $interval(function () {
                         self.data1.data = [
-                            [r(), r(), r(), r(), r(), r(), r()],
-                            [r(), r(), r(), r(), r(), r(), r()]
+                            [random(), random(), random(), random(), random(), random(), random()],
+                            [random(), random(), random(), random(), random(), random(), random()]
                         ];
                     }, 5000);
 
                     $interval(function () {
-                        self.data2.data[0].push(r());
-                        self.data2.data[0].shift(r());
-
-                        self.data2.data[1].push(r());
-                        self.data2.data[1].shift(r());
-
+                        self.data2.data[0].push(random());
+                        self.data2.data[0].shift(random());
+                        self.data2.data[1].push(random());
+                        self.data2.data[1].shift(random());
                     }, 1000);
 
                 },

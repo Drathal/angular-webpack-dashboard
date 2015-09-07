@@ -1,6 +1,8 @@
 {
-  "CHARTTEST": {
-    "HOME" : "Diagramm",
-    "HEADING": "Diagramm test"
-  }
+    "CHARTTEST": {
+        "HOME": "Diagramm",
+        "HEADING": "Diagramm test",
+        "CARD1-TITLE": "Animations Beispiel",
+        "CARD2-TITLE": "Letzten 60 Skunden"
+    }
 }
