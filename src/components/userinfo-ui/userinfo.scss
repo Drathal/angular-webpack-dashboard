@@ -1,5 +1,9 @@
-.main-toolbar ui-user-info {
+[ui-user-info],
+ui-user-info {
     height: auto;
     margin: auto 0 auto auto;
-    color: #0088cc;
+
+    button {
+        text-transform: none !important;
+    }
 }

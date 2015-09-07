@@ -1,12 +1,13 @@
 <md-menu>
 
-    <md-button aria-label="Open User Menu" class="md-icon-button" ng-click="ctrl.openMenu($mdOpenMenu, $event)">
+    <md-button aria-label="Open User Menu" class="md-button" ng-click="ctrl.openMenu($mdOpenMenu, $event)">
         <md-icon md-font-set="material-icons">person</md-icon>
+        <span >{{ "USERINFO.GREETING" | translate:ctrl }}</span>
     </md-button>
 
     <md-menu-content >
         <md-menu-item>
-            <span >{{ "USERINFO.GREETING" | translate:ctrl }}</span>
+            <span >Some Options ...</span>
         </md-menu-item>
     </md-menu-content>
 
