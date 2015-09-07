@@ -11,7 +11,7 @@ module.exports = function () {
             preLoaders: [
                 {
                     test: /\.js$/,
-                    exclude: [/tepDefinitions\.js/,/test/, /node_modules/, /\.spec\.js$/],
+                    exclude: [/tepDefinitions\.js/, /node_modules/, /\.spec\.js$/],
                     loader: 'istanbul-instrumenter-loader'
                 }
             ],
