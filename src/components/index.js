@@ -6,6 +6,7 @@ module.exports = angular
         require('./userinfo-ui'),
         require('./counter-ui'),
         require('./menu-ui'),
-        require('./language-select-ui')
+        require('./language-select-ui'),
+        require('./bind-html-compile')
     ])
     .name;

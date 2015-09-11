@@ -45,6 +45,7 @@ module.exports = function makeWebpackConfig(options) {
                 test: /\.js$/,
                 loaders: [
                     'ng-annotate',
+                    'babel',
                     'jshint-loader',
                     'jscs-loader'
                 ],

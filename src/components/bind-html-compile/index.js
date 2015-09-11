@@ -1,6 +1,7 @@
-var angular = require('angular');
+import angular from 'angular';
+import bindHtmlCompile from './bind-html-compile.ctrl';
 
-module.exports = angular
-    .module('component.ui.bindHtmlCompile', [])
-    .directive('bindHtmlCompile', require('./bind-html-compile.ctrl'))
+export default angular
+    .module('component.ui.' + bindHtmlCompile.name, [])
+    .directive(bindHtmlCompile.name, bindHtmlCompile)
     .name;
