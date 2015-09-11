@@ -12,7 +12,7 @@ module.exports = function () {
                 {
                     test: /\.js$/,
                     exclude: [/tepDefinitions\.js/, /node_modules/, /\.spec\.js$/, /bundle\.js/],
-                    loaders: ['istanbul-instrumenter-loader','jshint-loader','jscs-loader']
+                    loaders: ['isparta-instrumenter-loader','jshint-loader','jscs-loader']
                 }
             ],
 
