@@ -7,6 +7,8 @@ module.exports = angular
         require('./counter-ui'),
         require('./menu-ui'),
         require('./language-select-ui'),
-        require('./bind-html-compile')
+        require('./bind-html-compile'),
+        require('./layout-full'),
+        require('./layout-sidebar')
     ])
     .name;

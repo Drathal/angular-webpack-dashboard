@@ -60,7 +60,7 @@ module.exports = function makeWebpackConfig(options) {
             },
             {
                 test: /\.(scss|css)$/,
-                loader: ExtractTextPlugin.extract('style-loader', 'css-loader?sourceMap!postcss!sass')
+                loader: BUILD ? ExtractTextPlugin.extract('style-loader', 'css-loader?sourceMap!postcss!sass') : 'style!css-loader?sourceMap!postcss!sass'
             },
             {
                 test: /\.(woff|woff2|ttf|eot|ico)$/,

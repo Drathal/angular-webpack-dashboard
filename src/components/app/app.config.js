@@ -2,7 +2,9 @@
 
 module.exports = /* @ngInject */ function ($urlRouterProvider, $stateProvider, $translateProvider, APPCONFIG, translationLoaderProvider, $mdThemingProvider, cfpLoadingBarProvider) {
 
-    $urlRouterProvider.otherwise('/feature-a');
+    translationLoaderProvider.add(__dirname);
+
+    $urlRouterProvider.otherwise('/login');
 
     $stateProvider
         .state('app', {
@@ -25,8 +27,6 @@ module.exports = /* @ngInject */ function ($urlRouterProvider, $stateProvider, $
         .useSanitizeValueStrategy()
         .determinePreferredLanguage()
         .useLocalStorage();
-
-    translationLoaderProvider.add(__dirname);
 
     cfpLoadingBarProvider.includeSpinner = true;
     cfpLoadingBarProvider.includeBar = true;

@@ -3,8 +3,8 @@
     <md-toolbar class="md-whiteframe-z2">
         <div class="md-toolbar-tools">
 
-            <img ng-src="{{ ::app.miniLogoUrl }}" style="width:30px;"/>
-            <h1 flex>&nbsp;{{ ::app.title }}</h1>
+            <img ng-src="{{ ::layoutSidebar.miniLogoUrl }}" style="width:30px;"/>
+            <h1 flex>&nbsp;{{ 'APP.SIDEBAR_TITLE' | translate }}</h1>
 
         </div>
     </md-toolbar>
@@ -21,7 +21,7 @@
         <div class="main-toolbar md-toolbar-tools">
 
             <span ui-view="toolbar-before"> </span>
-            <button class="md-button md-icon-button" ng-click="app.toggleSidebar()" hide-gt-md aria-label="Show Menu" tabindex="0">
+            <button class="md-button md-icon-button" ng-click="layoutSidebar.toggleSidebar()" hide-gt-md aria-label="Show Menu" tabindex="0">
                 <md-icon md-font-set="material-icons">menu</md-icon>
             </button>
             <h2 hide-sm><span hide-sm hide-md class="toolbar-title-padding"></span><span ui-view="toolbar-title"></span></h2>

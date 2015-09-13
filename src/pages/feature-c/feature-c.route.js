@@ -2,13 +2,13 @@ module.exports.config = /*@ngInject*/ function ($stateProvider, translationLoade
 
     translationLoaderProvider.add(__dirname);
 
-    $stateProvider.state('app.feature-c', {
+    $stateProvider.state('app.layout-sidebar.feature-c', {
         url: '/feature-c',
         views: {
-            'toolbar-title@': {
+            'toolbar-title': {
                 template: '{{ "FEATUREC.HEADING" | translate }}'
             },
-            '@': {
+            '': {
                 controller: function ($scope, data) {
                     this.data = data;
                 },
@@ -31,7 +31,7 @@ module.exports.run = /*@ngInject*/ function (menuService) {
     menuService.addMenu({
         name: 'FEATUREC.HOME',
         icon: 'dashboard',
-        state: 'app.feature-c',
+        state: 'app.layout-sidebar.feature-c',
         type: 'link'
     });
 

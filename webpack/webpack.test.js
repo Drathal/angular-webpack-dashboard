@@ -2,6 +2,8 @@ module.exports = function () {
 
     return {
 
+        cache : {},
+
         devtool: 'inline-source-map',
 
         node: {__dirname: true},

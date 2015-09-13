@@ -4,13 +4,13 @@ module.exports.config = /*@ngInject*/ function ($stateProvider, translationLoade
 
     translationLoaderProvider.add(__dirname);
 
-    $stateProvider.state('app.charttest', {
+    $stateProvider.state('app.layout-sidebar.charttest', {
         url: '/charttest',
         views: {
-            'toolbar-title@': {
+            'toolbar-title': {
                 template: '{{ "CHARTTEST.HEADING" | translate }}'
             },
-            '@': {
+            '': {
                 controller: function ($scope, data1, data2, $timeout, $interval, $mdMedia, $window) {
 
                     $scope.$watch(function() { return $mdMedia('gt-md'); }, function() {
@@ -94,7 +94,7 @@ module.exports.run = /*@ngInject*/ function (menuService) {
     menuService.addMenu({
         name: 'CHARTTEST.HOME',
         icon: 'equalizer',
-        state: 'app.charttest',
+        state: 'app.layout-sidebar.charttest',
         type: 'link'
     });
 

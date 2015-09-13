@@ -1,0 +1,8 @@
+{
+  "FEATUREA": {
+    "HOME" : "Home",
+    "HEADING": "Feature A!",
+    "INTROTEXT": "<h2>Feature A is implemented using controller and template which are bound together in ui-router state definition</h2><br /><p>Feature is so great that you won't believe! It also contains: {{ property }}</p>",
+    "TRYFEATUREB" : "Try Feature B"
+  }
+}

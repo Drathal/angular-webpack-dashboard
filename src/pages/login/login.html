@@ -1,0 +1,38 @@
+<div class="md-whiteframe-z3" layout="column" flex="50" layout-padding ng-class="{ loginWide : gtSm }">
+
+    <div layout="row" layout-align="center center" layout-margin>
+        <div>Login</div>
+    </div>
+
+    <form layout="column" name="loginForm">
+
+        <md-input-container flex layout-margin>
+            <label><md-icon >person</md-icon>&nbsp;Username</label>
+            <input type="text" ng-model="login.username" name="username" required minlength="5" aria-label="username"/>
+            <div ng-messages="loginForm.username.$error" ng-if="loginForm.username.$dirty" role="alert">
+                <div ng-message="required">That's required!</div>
+                <div ng-message="minlength">Too short...</div>
+            </div>
+        </md-input-container>
+
+        <md-input-container flex layout-margin>
+            <label><md-icon >vpn_key</md-icon>&nbsp;Password</label>
+            <input type="text" ng-model="login.password" name="password" required minlength="5" aria-label="password"/>
+            <div ng-messages="loginForm.password.$error" ng-if="loginForm.password.$dirty" role="alert">
+                <div ng-message="required">That's required!</div>
+                <div ng-message="minlength">Too short...</div>
+            </div>
+        </md-input-container>
+
+        <md-button class="md-raised md-primary" ui-sref="app.layout-sidebar.feature-a" aria-label="login">Sign In</md-button>
+
+    </form>
+
+    <div layout="row" layout-align="center space-between" layout-padding>
+        <md-button>Forgot password?</md-button>
+        <md-button>Create an account</md-button>
+    </div>
+</div>
+
+
+
