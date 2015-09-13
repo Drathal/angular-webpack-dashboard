@@ -6,7 +6,7 @@ module.exports.config = /*@ngInject*/ function ($stateProvider, translationLoade
         url: '/login',
         views: {
             '': {
-                template: '<login layout-fill layout="column" layout-align="center center"></login>'
+                template: '<login class="layout-fill" layout="column" layout-align="center center"></login>'
             }
         }
     });

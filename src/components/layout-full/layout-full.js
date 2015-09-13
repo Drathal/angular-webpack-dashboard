@@ -11,7 +11,7 @@ export default class LayoutFull {
     }
 
     link(scope, element) {
-        element.attr('layout', 'row');
+
     }
 
     /* @ngInject */

@@ -10,7 +10,7 @@ module.exports = /* @ngInject */ function ($urlRouterProvider, $stateProvider) {
                         this.data = data;
                     },
                     controllerAs: 'layoutFull',
-                    template: '<layout-full layout-fill></layout-full>',
+                    template: '<layout-full class="layout layout-fill"></layout-full>',
                     resolve: {
                         data: function () {
                             return {sample: '2'};

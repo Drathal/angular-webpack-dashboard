@@ -1,5 +1,10 @@
-login .loginWide {
+.loginWide {
     min-width: 400px;
+    background: #fff;
+}
+
+.links button span {
+    font-size: 12px;
 }
 
 form md-input-container {
