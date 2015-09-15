@@ -1,5 +1,6 @@
+var angular = require('angular');
+
 import './layout-full.scss';
-import angular from 'angular';
 import LayoutFull from './layout-full';
 
 module.exports = angular

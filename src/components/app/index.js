@@ -7,6 +7,8 @@ require('./app.scss');
 
 var angular = require('angular');
 
+import App from './app';
+
 var modules = [
     require('angular-material'),
     require('angular-ui-router'),
@@ -25,11 +27,5 @@ module.exports = angular
     .module('app', modules)
     .constant(require('./app.constants').name, require('./app.constants').value)
     .config(require('./app.config'))
-    .directive('app', function () {
-        return {
-            restrict: 'EA',
-            transclude: true,
-            template: require('./app.html')
-        };
-    })
+    .directive('app', App.directive)
     .name;

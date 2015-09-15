@@ -1,4 +1,4 @@
-import angular from 'angular';
+var angular = require('angular');
 import bindHtmlCompile from './bind-html-compile.ctrl';
 
 export default angular

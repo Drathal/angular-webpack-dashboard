@@ -1,5 +1,6 @@
+var angular = require('angular');
+
 import './layout-sidebar.scss';
-import angular from 'angular';
 import LayoutSidebar from './layout-sidebar';
 
 module.exports = angular
