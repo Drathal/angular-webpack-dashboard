@@ -26,7 +26,7 @@ module.exports.component = /*@ngInject*/ function($rootScope, $document) {
         }
     };
 
-    var service = {
+    return {
         addMenu: function(item) {
             menu.push(item);
         },
@@ -39,7 +39,5 @@ module.exports.component = /*@ngInject*/ function($rootScope, $document) {
             traverse(menu, callback);
         }
     };
-
-    return service;
 
 };
