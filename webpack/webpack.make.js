@@ -83,6 +83,29 @@ module.exports = function makeWebpackConfig(options) {
         })
     ];
 
+    config.resolve = {
+        root: [
+            path.join(__dirname, '../src'),
+            path.join(__dirname, '../node_modules')
+        ],
+        extensions: [
+            '',
+            '.js',
+            '.html',
+            '.css',
+            '.scss'
+        ],
+        alias: {
+            lodash: 'lodash',
+            jquery: 'jquery/dist/jquery',
+            angular: 'angular'
+        }
+    };
+
+    config.resolveLoader = {
+        root: path.join(__dirname, '../node_modules')
+    };
+
     //noinspection JSUnresolvedFunction
     config.plugins = [
         new ExtractTextPlugin('[name].[hash].css', {
@@ -139,10 +162,10 @@ module.exports = function makeWebpackConfig(options) {
     config.devServer = {
         contentBase: buildDir,
         stats: {
-            modules: false,
-            cached: false,
+            modules: true,
+            cached: true,
             colors: true,
-            chunk: false
+            chunk: true
         }
     };
 
