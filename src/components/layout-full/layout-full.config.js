@@ -1,21 +1,11 @@
-module.exports = /* @ngInject */ function ($urlRouterProvider, $stateProvider) {
+module.exports = /* @ngInject */ function ($stateProvider) {
 
     $stateProvider
         .state('app.layout-full', {
             abstract: true,
-
             views: {
                 'layout@': {
-                    controller: function ($scope, data) {
-                        this.data = data;
-                    },
-                    controllerAs: 'layoutFull',
-                    template: '<layout-full class="layout layout-fill"></layout-full>',
-                    resolve: {
-                        data: function () {
-                            return {sample: '2'};
-                        }
-                    }
+                    template: '<layout-full class="layout layout-fill"></layout-full>'
                 }
             }
         });

@@ -7,16 +7,6 @@ export default class LayoutFull {
         this.restrict = 'AE';
         this.transclude = true;
         this.template = template;
-        this.controllerAs = 'layoutFull';
-    }
-
-    link(scope, element) {
-
-    }
-
-    /* @ngInject */
-    controller() {
-
     }
 
     static directive() {
