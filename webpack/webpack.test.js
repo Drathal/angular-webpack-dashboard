@@ -1,3 +1,5 @@
+var path = require('path');
+
 module.exports = function () {
 
     return {
@@ -33,7 +35,11 @@ module.exports = function () {
 
         resolve: {
             root: __dirname + '/src',
-            modulesDirectories: ['node_modules']
+            modulesDirectories: ['node_modules'],
+
+            alias: {
+                angular: path.join(__dirname, '../node_modules/angular/index.js')
+            }
         }
 
     };
