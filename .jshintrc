@@ -16,6 +16,7 @@
     "loopfunc": false,
     "mocha": true,
     "jquery" : true,
+    "expr" : true,
     "globals": {
         "expect": false,
         "should": false,

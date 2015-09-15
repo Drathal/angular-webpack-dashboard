@@ -2,7 +2,7 @@ module.exports = function () {
 
     return {
 
-        cache : {},
+        cache: {},
 
         devtool: 'inline-source-map',
 
@@ -14,7 +14,7 @@ module.exports = function () {
                 {
                     test: /\.js$/,
                     exclude: [/tepDefinitions\.js/, /node_modules/, /\.spec\.js$/, /bundle\.js/],
-                    loaders: ['isparta-instrumenter-loader','jshint-loader','jscs-loader']
+                    loaders: ['isparta-instrumenter-loader', 'jshint-loader', 'jscs-loader']
                 }
             ],
 
@@ -24,9 +24,9 @@ module.exports = function () {
                     loaders: ['babel'],
                     exclude: [/node_modules/]
                 },
-                {test: /\.(jpe?g|png|gif|svg|woff|woff2|ttf|eot|ico)$/, loader: 'file'},
-                {test: /\.(scss|css)$/, loader: 'css-loader!postcss!sass'},
-                {test: /\.json(\?.*)?$/, loader: 'json'},
+                {test: /\.(jpe?g|png|gif|svg|woff|woff2|ttf|eot|ico)$/, loader: 'null'},
+                {test: /\.(scss|css)$/, loader: 'null'},
+                {test: /\.json(\?.*)?$/, loader: 'null'},
                 {test: /\.html$/, loader: 'raw'}
             ]
         },

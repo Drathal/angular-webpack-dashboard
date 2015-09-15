@@ -33,7 +33,7 @@ describe('component', function () {
             }));
 
             it('should define mini logo', function () {
-                expect(controller.miniLogoUrl).to.have.string('.png');
+                expect(controller.miniLogoUrl).to.exist;
             });
 
             it('should have a toggleSidebar function', function () {
