@@ -10,10 +10,6 @@ export default class LayoutSidebar {
         this.controllerAs = 'layoutSidebar';
     }
 
-    link(scope, element) {
-        element.attr('layout', 'row');
-    }
-
     /* @ngInject */
     controller($rootScope, $translate, $mdSidenav) {
 
