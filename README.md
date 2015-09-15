@@ -6,7 +6,12 @@
 [![Dependencies](https://david-dm.org/Drathal/angular-webpack-dashboard.svg)](https://david-dm.org/Drathal/angular-webpack-dashboard)
 [![Join the chat at https://gitter.im/Drathal/angular-webpack-dashboard](https://img.shields.io/badge/%E2%8A%AA%20GITTER%20-JOIN%20CHAT%20%E2%86%92-brightgreen.svg?style=flat)](https://gitter.im/Drathal/angular-webpack-dashboard)
 
-A little frontend to play around with: angular 1.x, material design, webpack and other nice things.
+A little frontend to play around with: 
+  * ES6 
+  * angular 1.x
+  * material design
+  * webpack
+  * component driven frontend
 
 ## requirements
   * [git](https://git-scm.com/)
