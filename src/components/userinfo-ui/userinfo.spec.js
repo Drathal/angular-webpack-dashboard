@@ -7,7 +7,8 @@ describe('component', function () {
             var controller;
             var open;
 
-            before(function () {
+            beforeEach(function () {
+                angular.mock.module('component.service.translationLoader');
                 controller = new UserInfoCtrl();
             });
 

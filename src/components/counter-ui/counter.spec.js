@@ -27,6 +27,7 @@ describe('component', function () {
             var element;
             var $scope;
 
+            beforeEach(angular.mock.module('component.service.translationLoader'));
             beforeEach(angular.mock.module(require('./index.js')));
             beforeEach(inject(function ($rootScope, $compile) {
                 element = angular.element('<counter></counter>');
