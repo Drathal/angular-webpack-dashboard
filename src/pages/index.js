@@ -6,7 +6,8 @@ module.exports = angular
         require('./feature-b'),
         require('./feature-c'),
         require('./chart-test'),
-        require('./login')
+        require('./login'),
+        require('./test')
     ])
     .name;
 
