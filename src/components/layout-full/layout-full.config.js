@@ -5,7 +5,7 @@ module.exports = /* @ngInject */ function ($stateProvider) {
             abstract: true,
             views: {
                 'layout@': {
-                    template: '<layout-full class="layout layout-fill"></layout-full>'
+                    template: '<layout-full></layout-full>'
                 }
             }
         });

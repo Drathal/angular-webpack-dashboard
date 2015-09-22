@@ -1,17 +1,28 @@
-import template from './app.html';
-
 export default class App {
 
-    /* @ngInject */
-    constructor() {
-        this.restrict = 'AE';
-        this.transclude = true;
-        this.template = template;
+    constructor($compile) {
+        this.restrict = 'A';
         this.controllerAs = 'app';
+        this.terminal = true;
+        this.priority = 1001;
+
+        this.$compile = $compile;
     }
 
-    static directive() {
-        return App.instance = new App();
+    compile($element) {
+        $element.addClass('layout');
+        $element.addClass('layout-fill');
+        $element.attr('ui-view', 'layout');
+
+        $element.removeAttr('app');
+        var fn = this.$compile($element);
+        return function (scope) {
+            fn(scope);
+        };
+    }
+
+    static /* @ngInject */ directive($compile) {
+        return App.instance = new App($compile);
     }
 
 }

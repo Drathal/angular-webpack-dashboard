@@ -5,11 +5,16 @@ export default class LayoutFull {
     /* @ngInject */
     constructor() {
         this.restrict = 'AE';
-        this.transclude = true;
         this.template = template;
+        this.transclude = true;
     }
 
-    static directive() {
+    link($scope, $element, $attrs) {
+        $element.addClass('layout');
+        $element.addClass('layout-fill');
+    }
+
+    static /* @ngInject */ directive() {
         return LayoutFull.instance = new LayoutFull();
     }
 

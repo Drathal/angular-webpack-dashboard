@@ -11,11 +11,19 @@ module.exports.config = /*@ngInject*/ function ($stateProvider, translationLoade
                 template: '{{ "CHARTTEST.HEADING" | translate }}'
             },
             '': {
-                controller: function ($scope, data1, data2, $timeout, $interval, $mdMedia, $window) {
+                controller: function ($scope, data1, data2, $timeout, $interval, $mdMedia, $window, $document) {
 
                     $scope.$watch(function() { return $mdMedia('gt-md'); }, function() {
                         $timeout(function() {
-                            $window.dispatchEvent(new Event('resize'));
+
+                            console.log('aaaaaa', new Event('resize'));
+
+                            if ($window.dispatchEvent) {
+                                $window.dispatchEvent(new Event('resize'));
+                            } else {
+                                var event = $document.createEventObject();
+                                $document.find('body').fireEvent('resize', event);
+                            }
                         }, 400);
                     });
 
