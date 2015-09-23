@@ -1,7 +1,7 @@
-<div layout="row" layout-md="column" layout-sm="column" layout-margin>
+<div class="layout layout-sm-column layout-gt-sm-row">
 
-    <md-card class="white md-whiteframe-z1" flex>
-        <md-card-content flex style="overflow:hidden; max-width:100%">
+    <md-card class="white md-whiteframe-z1 flex-gt-sm" >
+        <md-card-content>
             <h2>{{ 'CHARTTEST.CARD1-TITLE' | translate }}</h2>
             <canvas id="line" class="chart chart-line"
                     chart-data="chartTestState.data1.data"
@@ -13,8 +13,8 @@
         </md-card-content>
     </md-card>
 
-    <md-card class="white md-whiteframe-z1" flex>
-        <md-card-content flex style="overflow:hidden; max-width:100%">
+    <md-card class="white md-whiteframe-z1 flex-gt-sm" >
+        <md-card-content>
             <h2>{{ 'CHARTTEST.CARD2-TITLE' | translate }}</h2>
             <canvas id="line" class="chart chart-line"
                     chart-data="chartTestState.data2.data"

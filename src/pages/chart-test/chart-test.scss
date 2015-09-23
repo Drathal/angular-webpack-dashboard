@@ -6,6 +6,16 @@
     height: auto !important;
 }
 
+md-card {
+
+}
+
 md-card-content h2 {
     margin-top: 0;
 }
+
+md-card-content {
+    overflow:hidden;
+    max-width:100%
+}
+

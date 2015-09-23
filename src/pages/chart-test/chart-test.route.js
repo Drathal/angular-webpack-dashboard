@@ -13,17 +13,11 @@ module.exports.config = /*@ngInject*/ function ($stateProvider, translationLoade
             '': {
                 controller: function ($scope, data1, data2, $timeout, $interval, $mdMedia, $window, $document) {
 
-                    $scope.$watch(function() { return $mdMedia('gt-md'); }, function() {
-                        $timeout(function() {
-
-                            console.log('aaaaaa', new Event('resize'));
-
-                            if ($window.dispatchEvent) {
-                                $window.dispatchEvent(new Event('resize'));
-                            } else {
-                                var event = $document.createEventObject();
-                                $document.find('body').fireEvent('resize', event);
-                            }
+                    $scope.$watch(function () {
+                        return $mdMedia('gt-md');
+                    }, function () {
+                        $timeout(function () {
+                            jQuery($document.find('body')[0]).trigger('resize');
                         }, 400);
                     });
 
