@@ -32,10 +32,6 @@ describe('component', function () {
                 $rootScope.$digest();
             }));
 
-            it('should define mini logo', function () {
-                expect(controller.miniLogoUrl).to.exist;
-            });
-
             it('should have a toggleSidebar function', function () {
                 expect(controller.toggleSidebar).to.be.a('function');
                 controller.toggleSidebar();
