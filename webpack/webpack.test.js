@@ -21,22 +21,17 @@ module.exports = function () {
             ],
 
             loaders: [
-                {
-                    test: /\.js$/,
-                    loaders: ['babel'],
-                    exclude: [/node_modules/]
-                },
+                {test: /\.js$/, loader: 'babel-loader', exclude: [/node_modules/]},
                 {test: /\.(jpe?g|png|gif|svg|woff|woff2|ttf|eot|ico)$/, loader: 'null'},
                 {test: /\.(scss|css)$/, loader: 'null'},
                 {test: /\.json(\?.*)?$/, loader: 'null'},
-                {test: /\.html$/, loader: 'raw'}
+                {test: /\.html$/, loader: 'html'}
             ]
         },
 
         resolve: {
             root: __dirname + '/src',
-            modulesDirectories: ['node_modules'],
-
+            modulesDirectories: [require('path').join(__dirname, '../', 'node_modules')],
             alias: {
                 angular: path.join(__dirname, '../node_modules/angular/index.js')
             }

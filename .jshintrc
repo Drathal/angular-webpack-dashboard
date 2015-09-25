@@ -18,10 +18,11 @@
     "jquery" : true,
     "expr" : true,
     "globals": {
+        "chai": false,
         "expect": false,
         "should": false,
         "inject": false,
-        "sinon": false,
+        "sinon": true,
         "angular": true
     }
 }
