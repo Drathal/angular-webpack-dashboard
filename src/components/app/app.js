@@ -1,6 +1,7 @@
-export default class App {
+class App {
 
     constructor($compile) {
+        this.testParameter = '#here#';
         this.restrict = 'A';
         this.controllerAs = 'app';
         this.terminal = true;
@@ -21,8 +22,13 @@ export default class App {
         };
     }
 
-    static /* @ngInject */ directive($compile) {
-        return App.instance = new App($compile);
+    static directive($compile) {
+        App.instance = new App($compile);
+        return App.instance;
     }
 
 }
+
+App.directive.$inject = ['$compile'];
+
+export { App };

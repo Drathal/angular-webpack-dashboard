@@ -7,7 +7,7 @@ require('./app.scss');
 
 var angular = require('angular');
 
-import App from './app';
+import { App } from './app';
 
 var modules = [
     require('angular-material'),

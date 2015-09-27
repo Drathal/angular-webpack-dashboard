@@ -130,9 +130,11 @@ module.exports = function makeWebpackConfig(options) {
 
     if (BUILD) {
 
+        /*
         config.entry.vendor = [
             'jquery',
             'lodash',
+            'chart.js',
             'angular',
             'angular-material',
             'angular-animate',
@@ -144,14 +146,16 @@ module.exports = function makeWebpackConfig(options) {
             'angular-ui-router',
             'angular-cookies',
             'angular-local-storage',
-            'angular-loading-bar'
+            'angular-loading-bar',
+            'angular-chart.js'
         ];
+        */
 
         //noinspection JSUnresolvedFunction
         config.plugins.push(
             new Clean(['../build']),
             new webpack.NoErrorsPlugin(),
-            new webpack.optimize.CommonsChunkPlugin({name: 'vendor', filename: 'vendor.[hash].js'}),
+            //new webpack.optimize.CommonsChunkPlugin({name: 'vendor', filename: 'vendor.[hash].js'}),
             new webpack.optimize.MinChunkSizePlugin({minChunkSize: 1000}),
             new webpack.optimize.OccurenceOrderPlugin(true),
             new webpack.optimize.DedupePlugin(),

@@ -1,7 +1,7 @@
 var angular = require('angular');
 
 import './layout-sidebar.scss';
-import LayoutSidebar from './layout-sidebar';
+import { LayoutSidebar } from './layout-sidebar';
 
 module.exports = angular
     .module('app.layout-sidebar', [])

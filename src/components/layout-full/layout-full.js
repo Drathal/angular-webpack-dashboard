@@ -1,8 +1,7 @@
 import template from './layout-full.html';
 
-export default class LayoutFull {
+class LayoutFull {
 
-    /* @ngInject */
     constructor() {
         this.restrict = 'AE';
         this.template = template;
@@ -14,8 +13,12 @@ export default class LayoutFull {
         $element.addClass('layout-fill');
     }
 
-    static /* @ngInject */ directive() {
+    static directive() {
         return LayoutFull.instance = new LayoutFull();
     }
 
 }
+
+LayoutFull.directive.$inject = [];
+
+export { LayoutFull };

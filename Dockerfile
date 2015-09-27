@@ -1,10 +1,11 @@
-FROM    nginx:1.7
-MAINTAINER  "Andre Duis" <duis@cleverbridge.com>
+FROM sinet/nginx-node:0.12.4
 
-RUN npm install && npm run build
+COPY . /usr/src/app
+WORKDIR /usr/src/app
 
-ADD build /build
-ADD conf/nginx.conf /etc/nginx/conf/nginx.conf
+RUN npm install
+RUN npm run build
 
-EXPOSE  80
-CMD     ["nginx", "-g", "daemon off;"]
+ADD nginx.conf /etc/nginx/nginx.conf
+
+CMD ["nginx", "-g", "daemon off;"]
