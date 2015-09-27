@@ -1,14 +1,16 @@
-export default class LayoutSidebar {
+class LayoutSidebar {
 
-    constructor($rootScope, $translate, $mdSidenav) {
+    /*@ngInject*/
+    constructor() {
         this.restrict = 'AE';
         this.transclude = true;
         this.template = require('./layout-sidebar.html');
         this.controllerAs = 'layoutSidebar';
     }
 
-    /*@ngInject*/
     controller($rootScope, $translate, $mdSidenav) {
+
+        'ngInject';
 
         $translate(['APP.SIDEBAR_TITLE']).then((translations) => {
             this.title = translations['APP.SIDEBAR_TITLE'];
@@ -24,12 +26,11 @@ export default class LayoutSidebar {
 
     }
 
-    static directive($rootScope, $translate, $mdSidenav) {
-        return LayoutSidebar.instance = new LayoutSidebar($rootScope, $translate, $mdSidenav);
+    static directive() {
+        'ngInject';
+        return LayoutSidebar.instance = new LayoutSidebar();
     }
 
 }
-
-LayoutSidebar.directive.$inject = ['$rootScope', '$translate', '$mdSidenav'];
 
 export { LayoutSidebar };
