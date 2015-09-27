@@ -1,7 +1,6 @@
 class App {
 
     constructor($compile) {
-        this.testParameter = '#here#';
         this.restrict = 'A';
         this.controllerAs = 'app';
         this.terminal = true;
