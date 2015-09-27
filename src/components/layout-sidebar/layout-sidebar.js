@@ -5,21 +5,23 @@ export default class LayoutSidebar {
         this.transclude = true;
         this.template = require('./layout-sidebar.html');
         this.controllerAs = 'layoutSidebar';
+    }
 
-        this.$mdSidenav = $mdSidenav;
+    /*@ngInject*/
+    controller($rootScope, $translate, $mdSidenav) {
 
         $translate(['APP.SIDEBAR_TITLE']).then((translations) => {
             this.title = translations['APP.SIDEBAR_TITLE'];
         });
 
         $rootScope.$on('$locationChangeSuccess', () => {
-            this.$mdSidenav('left').close();
+            $mdSidenav('left').close();
         });
 
-    }
+        this.toggleSidebar = () => {
+            $mdSidenav('left').toggle();
+        };
 
-    toggleSidebar() {
-        this.$mdSidenav('left').toggle();
     }
 
     static directive($rootScope, $translate, $mdSidenav) {

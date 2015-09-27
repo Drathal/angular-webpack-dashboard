@@ -1,4 +1,4 @@
-var LayoutSidebar = require('./layout-sidebar');
+var { LayoutSidebar } = require('./layout-sidebar');
 
 describe('component', function () {
     describe('layout-sidebar', function () {
