@@ -60,7 +60,7 @@ module.exports = function karmaConfig(config) {
             'karma-chrome-launcher',
             'karma-sourcemap-loader',
             'karma-phantomjs-shim',
-            'istanbul-instrumenter-loader',
+            'isparta-instrumenter-loader',
             'json-loader'
         ],
 
