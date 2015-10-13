@@ -24,8 +24,9 @@ module.exports = function () {
                 {test: /\.js$/, loader: 'babel-loader', exclude: [/node_modules/]},
                 {test: /\.(jpe?g|png|gif|svg|woff|woff2|ttf|eot|ico)$/, loader: 'null'},
                 {test: /\.(scss|css)$/, loader: 'null'},
-                {test: /\.json(\?.*)?$/, loader: 'null'},
-                {test: /\.html$/, loader: 'html'}
+                {test: /\.json(\?.*)?$/, loader: 'json'},
+                {test: /\.html$/, loader: 'html'},
+                {test: /\.po$/, loader: 'json!angular-gettext?format=json'}
             ]
         },
 

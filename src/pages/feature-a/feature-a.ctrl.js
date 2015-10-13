@@ -1,5 +1,3 @@
-module.exports = function() {
-
-    this.property = 'My little Property 2';
-
+module.exports = function(gettextCatalog) {
+    this.property = gettextCatalog.getString('My little Property 2');
 };

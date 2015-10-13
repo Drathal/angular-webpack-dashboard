@@ -8,13 +8,11 @@ class LayoutSidebar {
         this.controllerAs = 'layoutSidebar';
     }
 
-    controller($rootScope, $translate, $mdSidenav) {
+    controller($rootScope, $mdSidenav) {
 
         'ngInject';
 
-        $translate(['APP.SIDEBAR_TITLE']).then((translations) => {
-            this.title = translations['APP.SIDEBAR_TITLE'];
-        });
+        this.title = 'APP.SIDEBAR_TITLE';
 
         $rootScope.$on('$locationChangeSuccess', () => {
             $mdSidenav('left').close();

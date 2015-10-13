@@ -1,36 +1,36 @@
 <div class="md-whiteframe-z3" class="layout layout-column layout-padding" ng-class="{ loginWide : gtSm }">
 
     <div class="layout layout-align-center-center layout-margin">
-        <div>Login</div>
+        <div translate>Login</div>
     </div>
 
     <form class="layout layout-column" name="loginForm">
 
         <md-input-container class="layout-margin">
-            <label><md-icon >person</md-icon>&nbsp;Username</label>
-            <input type="text" ng-model="login.username" name="username" required minlength="5" aria-label="username"/>
+            <label><md-icon >person</md-icon>&nbsp;{{ 'Username' | translate }}</label>
+            <input type="text" ng-model="login.username" name="username" required minlength="5" aria-label="{{ 'Username' | translate }}"/>
             <div ng-messages="loginForm.username.$error" ng-if="loginForm.username.$dirty" role="alert">
-                <div ng-message="required">That's required!</div>
-                <div ng-message="minlength">Too short...</div>
+                <div ng-message="required" translate>That's required!</div>
+                <div ng-message="minlength" translate>Too short...</div>
             </div>
         </md-input-container>
 
         <md-input-container class="layout-margin">
-            <label><md-icon >vpn_key</md-icon>&nbsp;Password</label>
-            <input type="text" ng-model="login.password" name="password" required minlength="5" aria-label="password"/>
+            <label><md-icon >vpn_key</md-icon>&nbsp;{{ 'Password' | translate }}</label>
+            <input type="text" ng-model="login.password" name="password" required minlength="5" aria-label="{{ 'Password' | translate }}"/>
             <div ng-messages="loginForm.password.$error" ng-if="loginForm.password.$dirty" role="alert">
-                <div ng-message="required">That's required!</div>
-                <div ng-message="minlength">Too short...</div>
+                <div ng-message="required" translate>That's required!</div>
+                <div ng-message="minlength" translate>Too short...</div>
             </div>
         </md-input-container>
 
-        <md-button class="md-raised md-primary" ui-sref="app.layout-sidebar.feature-a" aria-label="login">Sign In</md-button>
+        <md-button class="md-raised md-primary" ui-sref="app.layout-sidebar.feature-a" aria-label="login" translate>Sign In</md-button>
 
     </form>
 
     <div class="links layout layout-sm-column layout-gt-sm-row layout-align-space-between-center" >
-        <md-button>Forgot password?</md-button>
-        <md-button>Create an account</md-button>
+        <md-button translate>Forgot password?</md-button>
+        <md-button translate>Create an account</md-button>
     </div>
 </div>
 

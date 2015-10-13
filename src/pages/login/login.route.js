@@ -1,6 +1,6 @@
-module.exports.config = /*@ngInject*/ function ($stateProvider, translationLoaderProvider) {
+module.exports.config = /*@ngInject*/ function ($stateProvider, $urlRouterProvider) {
 
-    translationLoaderProvider.add(__dirname);
+    $urlRouterProvider.otherwise('/login');
 
     $stateProvider.state('app.layout-full.login', {
         url: '/login',

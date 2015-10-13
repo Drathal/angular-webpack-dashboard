@@ -1,7 +1,11 @@
 node_modules
 build
 coverage
-.idea/workspace.xml
 npm-debug.log
 phantomjsdriver.log
 stats.json
+translate/*.mo
+
+# JetBrains
+.idea/workspace.xml
+.idea/tasks.xml

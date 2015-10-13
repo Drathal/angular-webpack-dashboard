@@ -1,11 +1,14 @@
-module.exports = /*@ngInject*/ function($translate) {
+module.exports = /*@ngInject*/ function(gettextCatalog, APPCONFIG, localStorageService) {
+
+    this.languages = APPCONFIG.languages;
 
     this.openLanguageMenu = function($mdOpenMenu, event) {
         $mdOpenMenu(event);
     };
 
     this.changeLanguage = function (langKey) {
-        $translate.use(langKey);
+        gettextCatalog.setCurrentLanguage(langKey);
+        localStorageService.set('dashboardLang', langKey);
     };
 
 };

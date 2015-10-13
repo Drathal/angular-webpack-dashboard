@@ -5,16 +5,13 @@
     </md-button>
 
     <md-menu-content width="4">
-        <md-menu-item>
-            <md-button ng-click="ctrl.changeLanguage('de')">
-                <span class="flag-icon flag-icon-de"></span>&nbsp;{{ 'LANGUAGESELECT.LANGUAGES.GERMAN' | translate }}
+
+        <md-menu-item ng-repeat="menuItem in ctrl.languages track by menuItem.key">
+            <md-button ng-click="ctrl.changeLanguage(menuItem.key)">
+                <span class="flag-icon flag-icon-{{  menuItem.icon || menuItem.key }}"></span>&nbsp;{{ menuItem.name | translate }}
             </md-button>
         </md-menu-item>
-        <md-menu-item>
-            <md-button ng-click="ctrl.changeLanguage('en')">
-                <span class="flag-icon flag-icon-us"></span>&nbsp;{{ 'LANGUAGESELECT.LANGUAGES.ENGLISH' | translate }}
-            </md-button>
-        </md-menu-item>
+
     </md-menu-content>
 
 </md-menu>

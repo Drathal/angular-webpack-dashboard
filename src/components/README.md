@@ -7,7 +7,6 @@ each component must be registred in `index.js`
 ```
 module.exports = angular
     .module('app.components', [
-        require('./translation-loader-service'),
         require('./userinfo-ui'),
         require('./counter-ui')
     ])

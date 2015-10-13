@@ -3,8 +3,7 @@ require('./language-select.scss');
 
 module.exports = angular
     .module('component.ui.languageSelect', [
-        require('angular-material'),
-        require('angular-translate')
+        require('angular-material')
     ])
     .directive('uiLanguageSelect', function () {
         return {
@@ -14,7 +13,7 @@ module.exports = angular
             template: require('./language-select.html')
         };
     })
-    .config(function (translationLoaderProvider) {
-        translationLoaderProvider.add(__dirname);
+    .config(function () {
+
     })
     .name;

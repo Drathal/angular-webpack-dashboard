@@ -1,6 +1,4 @@
-module.exports.config = /*@ngInject*/ function ($stateProvider, translationLoaderProvider) {
-
-    translationLoaderProvider.add(__dirname);
+module.exports.config = /*@ngInject*/ function ($stateProvider) {
 
     $stateProvider.state('app.layout-full.test', {
         url: '/test',

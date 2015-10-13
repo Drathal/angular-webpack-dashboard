@@ -1,0 +1,197 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.5\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: src/pages/chart-test/chart-test.page.html:5
+msgid "Animations Sample"
+msgstr ""
+
+#: src/pages/chart-test/chart-test.route.js:54
+msgid "April"
+msgstr ""
+
+#: src/pages/chart-test/chart-test.route.js:9
+msgid "Chart Sample"
+msgstr ""
+
+#: src/pages/chart-test/chart-test.route.js:95
+msgid "Charts"
+msgstr ""
+
+#: src/components/counter-ui/counter.html:2
+msgid "Counter: <b>{{ctrl.count}}</b> point"
+msgid_plural "Counter: <b>{{ctrl.count}}</b> points"
+msgstr[0] ""
+msgstr[1] ""
+
+#: src/components/counter-ui/counter.html:3
+msgid "counter++"
+msgstr ""
+
+#: src/pages/login/login.html:33
+msgid "Create an account"
+msgstr ""
+
+#: src/components/layout-sidebar/layout-sidebar.html:7
+msgid "Dashboard"
+msgstr ""
+
+#: src/components/app/app.constants.js:9
+msgid "English"
+msgstr ""
+
+#. Menu Title
+#. Toolbar Title
+#: src/pages/feature-a/feature-a.html:3
+#: src/pages/feature-a/feature-a.route.js:31
+#: src/pages/feature-a/feature-a.route.js:8
+msgid "Feature A"
+msgstr ""
+
+#: src/pages/feature-a/feature-a.html:4
+msgid ""
+"Feature A is implemented using controller and template which are bound "
+"together in ui-router state definition"
+msgstr ""
+
+#: src/pages/feature-b/feature-b.html:3
+#: src/pages/feature-b/feature-b.route.js:20
+#: src/pages/feature-b/feature-b.route.js:7
+msgid "Feature B"
+msgstr ""
+
+#: src/pages/feature-b/feature-b.ctrl.js:2
+msgid "Feature B Controller Property"
+msgstr ""
+
+#: src/pages/feature-b/feature-b.html:4
+msgid "Feature B is implemented as Component using \"Component Pattern\""
+msgstr ""
+
+#: src/pages/feature-c/feature-c.route.js:30
+#: src/pages/feature-c/feature-c.route.js:7
+msgid "Feature C"
+msgstr ""
+
+#: src/pages/feature-b/feature-b.html:5
+msgid ""
+"Feature is so great that it even contains counter functionality! It also "
+"contains: {{ ctrl.property }}"
+msgstr ""
+
+#: src/pages/feature-a/feature-a.html:5
+msgid ""
+"Feature is so great that you won't believe! It also contains: {{ ctrl."
+"property }}"
+msgstr ""
+
+#: src/pages/chart-test/chart-test.route.js:54
+msgid "February"
+msgstr ""
+
+#: src/pages/login/login.html:32
+msgid "Forgot password?"
+msgstr ""
+
+#: src/components/app/app.constants.js:13
+msgid "German"
+msgstr ""
+
+#: src/components/userinfo-ui/userinfo.html:5
+msgid "Hallo, {{ ctrl.name }}"
+msgstr ""
+
+#: src/pages/chart-test/chart-test.route.js:54
+msgid "January"
+msgstr ""
+
+#: src/pages/chart-test/chart-test.route.js:54
+msgid "July"
+msgstr ""
+
+#: src/pages/chart-test/chart-test.route.js:54
+msgid "June"
+msgstr ""
+
+#: src/pages/chart-test/chart-test.page.html:18
+msgid "Last 60 Seconds"
+msgstr ""
+
+#: src/pages/login/login.html:4
+msgid "Login"
+msgstr ""
+
+#: src/components/userinfo-ui/userinfo.html:10
+msgid "Logout"
+msgstr ""
+
+#: src/pages/chart-test/chart-test.route.js:54
+msgid "March"
+msgstr ""
+
+#: src/pages/chart-test/chart-test.route.js:54
+msgid "May"
+msgstr ""
+
+#: src/pages/feature-a/feature-a.ctrl.js:2
+msgid "My little Property 2"
+msgstr ""
+
+#: src/pages/login/login.html:19 src/pages/login/login.html:20
+msgid "Password"
+msgstr ""
+
+#: src/pages/feature-a/feature-a.html:7
+msgid "Resolved Data:{{ ctrl.data }}"
+msgstr ""
+
+#: src/pages/chart-test/chart-test.route.js:55
+#: src/pages/chart-test/chart-test.route.js:72
+msgid "Series A"
+msgstr ""
+
+#: src/pages/chart-test/chart-test.route.js:55
+#: src/pages/chart-test/chart-test.route.js:72
+msgid "Series B"
+msgstr ""
+
+#: src/pages/login/login.html:27
+msgid "Sign In"
+msgstr ""
+
+#: src/pages/login/login.html:13 src/pages/login/login.html:22
+msgid "That's required!"
+msgstr ""
+
+#: src/pages/login/login.html:14 src/pages/login/login.html:23
+msgid "Too short..."
+msgstr ""
+
+#: src/pages/feature-b/feature-b.html:11
+msgid "Try Feature A"
+msgstr ""
+
+#: src/pages/feature-a/feature-a.html:9
+msgid "Try Feature B"
+msgstr ""
+
+#: src/pages/feature-b/feature-b.html:7 src/pages/feature-b/feature-b.html:8
+msgid "User Overloading:"
+msgstr ""
+
+#: src/pages/login/login.html:10 src/pages/login/login.html:11
+msgid "Username"
+msgstr ""
+
+#~ msgid "FEATUREA.INTROTEXT"
+#~ msgstr "##########"

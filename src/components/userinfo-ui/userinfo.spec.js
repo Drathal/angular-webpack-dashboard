@@ -8,7 +8,6 @@ describe('component', function () {
             var open;
 
             beforeEach(function () {
-                angular.mock.module('component.service.translationLoader');
                 controller = new UserInfoCtrl();
             });
 
@@ -33,7 +32,6 @@ describe('component', function () {
             var $scope;
 
             beforeEach(function () {
-                angular.mock.module('component.service.translationLoader');
                 angular.mock.module(require('./index.js'));
                 angular.mock.inject(function ($rootScope, $compile) {
                     element = angular.element('<ui-user-info></ui-user-info>');

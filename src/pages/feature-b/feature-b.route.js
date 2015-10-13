@@ -1,12 +1,10 @@
-module.exports.config = /*@ngInject*/ function($stateProvider, translationLoaderProvider) {
-
-    translationLoaderProvider.add(__dirname);
+module.exports.config = /*@ngInject*/ function($stateProvider, gettext) {
 
     $stateProvider.state('app.layout-sidebar.feature-b', {
         url: '/feature-b',
         views: {
             'toolbar-title': {
-                template: '{{ "FEATUREB.HEADING" | translate }}'
+                template: gettext('Feature B')
             },
             '': {
                 template: '<div class="md-whiteframe-z1 white" layout-margin><feature-b></feature-b></div>'
@@ -16,10 +14,10 @@ module.exports.config = /*@ngInject*/ function($stateProvider, translationLoader
 
 };
 
-module.exports.run = /*@ngInject*/ function(menuService) {
+module.exports.run = /*@ngInject*/ function(menuService, gettext) {
 
     menuService.addMenu({
-        name: 'FEATUREB.HOME',
+        name: gettext('Feature B'),
         icon: 'adjust',
         state: 'app.layout-sidebar.feature-b',
         type: 'link'

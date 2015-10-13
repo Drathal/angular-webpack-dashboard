@@ -1,0 +1,234 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.5\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: src/pages/chart-test/chart-test.page.html:5
+msgid "Animations Sample"
+msgstr "Beispiel Animationen"
+
+#: src/pages/chart-test/chart-test.route.js:54
+msgid "April"
+msgstr "April"
+
+#: src/pages/chart-test/chart-test.route.js:9
+msgid "Chart Sample"
+msgstr "Diagramm-Beispiel"
+
+#: src/pages/chart-test/chart-test.route.js:95
+msgid "Charts"
+msgstr "Diagramm"
+
+#: src/components/counter-ui/counter.html:2
+msgid "Counter: <b>{{ctrl.count}}</b> point"
+msgid_plural "Counter: <b>{{ctrl.count}}</b> points"
+msgstr[0] "Zähler: <b>{{ctrl.count}}</b> Punkt"
+msgstr[1] "Zähler: <b>{{ctrl.count}}</b> Punkte"
+
+#: src/components/counter-ui/counter.html:3
+msgid "counter++"
+msgstr "counter++"
+
+#: src/pages/login/login.html:33
+msgid "Create an account"
+msgstr "Erstelle einen Account"
+
+#: src/components/layout-sidebar/layout-sidebar.html:7
+msgid "Dashboard"
+msgstr "Dashboard"
+
+#: src/components/app/app.constants.js:9
+msgid "English"
+msgstr "Englisch"
+
+#. Menu Title
+#. Toolbar Title
+#: src/pages/feature-a/feature-a.html:3
+#: src/pages/feature-a/feature-a.route.js:31
+#: src/pages/feature-a/feature-a.route.js:8
+msgid "Feature A"
+msgstr "Feature"
+
+#: src/pages/feature-a/feature-a.html:4
+msgid ""
+"Feature A is implemented using controller and template which are bound "
+"together in ui-router state definition"
+msgstr ""
+"Feature A wird mit Controller und Template, die über  ui-router Status-"
+"Definition zusammengehalten werden, implementiert."
+
+#: src/pages/feature-b/feature-b.html:3
+#: src/pages/feature-b/feature-b.route.js:20
+#: src/pages/feature-b/feature-b.route.js:7
+msgid "Feature B"
+msgstr "Feature B"
+
+#: src/pages/feature-b/feature-b.ctrl.js:2
+msgid "Feature B Controller Property"
+msgstr "Funktion B Controller-Eigenschaft"
+
+#: src/pages/feature-b/feature-b.html:4
+msgid "Feature B is implemented as Component using \"Component Pattern\""
+msgstr ""
+"Funktion B ist als Komponente mit \"Komponenten Muster\" implementiert."
+
+#: src/pages/feature-c/feature-c.route.js:30
+#: src/pages/feature-c/feature-c.route.js:7
+msgid "Feature C"
+msgstr "Feature-C"
+
+#: src/pages/feature-b/feature-b.html:5
+msgid ""
+"Feature is so great that it even contains counter functionality! It also "
+"contains: {{ ctrl.property }}"
+msgstr ""
+"Funktion ist so toll, dass es sogar Zähler Funktionalität enthält! Es "
+"enthält auch: {{ctrl.property}}"
+
+#: src/pages/feature-a/feature-a.html:5
+msgid ""
+"Feature is so great that you won't believe! It also contains: {{ ctrl."
+"property }}"
+msgstr ""
+"Funktion ist so toll, dass Sie werden nicht glauben! Es enthält auch: "
+"{{ctrl.property}}"
+
+#: src/pages/chart-test/chart-test.route.js:54
+msgid "February"
+msgstr "Februar"
+
+#: src/pages/login/login.html:32
+msgid "Forgot password?"
+msgstr "Passwort vergessen?"
+
+#: src/components/app/app.constants.js:13
+msgid "German"
+msgstr "Deutsch"
+
+#: src/components/userinfo-ui/userinfo.html:5
+msgid "Hallo, {{ ctrl.name }}"
+msgstr "Hallo, {{ctrl.name}}"
+
+#: src/pages/chart-test/chart-test.route.js:54
+msgid "January"
+msgstr "Januar"
+
+#: src/pages/chart-test/chart-test.route.js:54
+msgid "July"
+msgstr "Juli"
+
+#: src/pages/chart-test/chart-test.route.js:54
+msgid "June"
+msgstr "Juni"
+
+#: src/pages/chart-test/chart-test.page.html:18
+msgid "Last 60 Seconds"
+msgstr "Letzten 60 Sekunden"
+
+#: src/pages/login/login.html:4
+msgid "Login"
+msgstr "Einloggen"
+
+#: src/components/userinfo-ui/userinfo.html:10
+msgid "Logout"
+msgstr "Abmelden"
+
+#: src/pages/chart-test/chart-test.route.js:54
+msgid "March"
+msgstr "März"
+
+#: src/pages/chart-test/chart-test.route.js:54
+msgid "May"
+msgstr "Mai"
+
+#: src/pages/feature-a/feature-a.ctrl.js:2
+msgid "My little Property 2"
+msgstr "Meine kleine Eigenschaft 2"
+
+#: src/pages/login/login.html:19 src/pages/login/login.html:20
+msgid "Password"
+msgstr "Passwort"
+
+#: src/pages/feature-a/feature-a.html:7
+msgid "Resolved Data:{{ ctrl.data }}"
+msgstr "Aufgelöst Daten :{{ctrl.data}}"
+
+#: src/pages/chart-test/chart-test.route.js:55
+#: src/pages/chart-test/chart-test.route.js:72
+msgid "Series A"
+msgstr "Serie A"
+
+#: src/pages/chart-test/chart-test.route.js:55
+#: src/pages/chart-test/chart-test.route.js:72
+msgid "Series B"
+msgstr "Serie B"
+
+#: src/pages/login/login.html:27
+msgid "Sign In"
+msgstr "Anmelden"
+
+#: src/pages/login/login.html:13 src/pages/login/login.html:22
+msgid "That's required!"
+msgstr "Ist erforderlich!"
+
+#: src/pages/login/login.html:14 src/pages/login/login.html:23
+msgid "Too short..."
+msgstr "Zu kurz!"
+
+#: src/pages/feature-b/feature-b.html:11
+msgid "Try Feature A"
+msgstr "Probieren Sie die Feature A"
+
+#: src/pages/feature-a/feature-a.html:9
+msgid "Try Feature B"
+msgstr "Probieren Sie die Feature B"
+
+#: src/pages/feature-b/feature-b.html:7 src/pages/feature-b/feature-b.html:8
+msgid "User Overloading:"
+msgstr "Benutzer überladen:"
+
+#: src/pages/login/login.html:10 src/pages/login/login.html:11
+msgid "Username"
+msgstr "Benutzername"
+
+# test commentar
+#~ msgctxt "cccccccccccccccc"
+#~ msgid "FEATUREB.HEADING"
+#~ msgstr "Feature B"
+
+#~ msgid "Hello"
+#~ msgstr "Hallo"
+
+#~ msgid "Second"
+#~ msgstr "Zweiter Beitrag"
+
+#~ msgid "ctrl Hello"
+#~ msgstr "controller HALLO"
+
+#~ msgid "FEATUREA.HEADING"
+#~ msgstr "Feature B (2)"
+
+#~ msgid "Hello!"
+#~ msgstr "Hallo!"
+
+#~ msgid "LANGUAGE.ENGLISH"
+#~ msgstr "Englisch"
+
+#~ msgid "LANGUAGE.GERMAN"
+#~ msgstr "Deutsch"
+
+#~ msgid "Test a first Translation"
+#~ msgstr "Testen Sie eine erste Übersetzung"
+
+#~ msgctxt "aaaaaaaaaaaaaaaaa"
+#~ msgid "translate me"
+#~ msgstr "Übersetz mich"

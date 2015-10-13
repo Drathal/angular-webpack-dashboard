@@ -1,14 +1,12 @@
 require('./chart-test.scss');
 
-module.exports.config = /*@ngInject*/ function ($stateProvider, translationLoaderProvider) {
-
-    translationLoaderProvider.add(__dirname);
+module.exports.config = /*@ngInject*/ function ($stateProvider, gettext) {
 
     $stateProvider.state('app.layout-sidebar.charttest', {
         url: '/charttest',
         views: {
             'toolbar-title': {
-                template: '{{ "CHARTTEST.HEADING" | translate }}'
+                template: gettext('Chart Sample')
             },
             '': {
                 controller: function ($scope, data1, data2, $timeout, $interval, $mdMedia, $window, $document) {
@@ -53,8 +51,8 @@ module.exports.config = /*@ngInject*/ function ($stateProvider, translationLoade
                 resolve: {
                     data1: function () {
                         return {
-                            labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
-                            series: ['Series A', 'Series B'],
+                            labels: [gettext('January'), gettext('February'), gettext('March'), gettext('April'), gettext('May'), gettext('June'), gettext('July')],
+                            series: [gettext('Series A'), gettext('Series B')],
                             data: [
                                 [65, 59, 80, 81, 56, 55, 100],
                                 [0, 48, 40, 19, 86, 27, 90]
@@ -71,7 +69,7 @@ module.exports.config = /*@ngInject*/ function ($stateProvider, translationLoade
                     data2: function () {
                         return {
                             labels: ['-60', '-55', '-50', '-45', '-40', '-35', '-30', '-25', '-20', '-15', '-10', '-5', 'now'],
-                            series: ['Series A', 'Series B'],
+                            series: [gettext('Series A'), gettext('Series B')],
                             data: [
                                 [65, 59, 100, 81, 56, 55, 40, 65, 59, 100, 81, 56, 55, 40],
                                 [28, 48, 40, 19, 0, 27, 90, 28, 48, 40, 19, 0, 27, 90]
@@ -91,10 +89,10 @@ module.exports.config = /*@ngInject*/ function ($stateProvider, translationLoade
 
 };
 
-module.exports.run = /*@ngInject*/ function (menuService) {
+module.exports.run = /*@ngInject*/ function (menuService, gettext) {
 
     menuService.addMenu({
-        name: 'CHARTTEST.HOME',
+        name: gettext('Charts'),
         icon: 'equalizer',
         state: 'app.layout-sidebar.charttest',
         type: 'link'

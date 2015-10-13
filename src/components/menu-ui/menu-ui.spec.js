@@ -6,8 +6,6 @@ describe('component', function () {
             var element;
             var $scope;
 
-            beforeEach(angular.mock.module('component.service.translationLoader'));
-            beforeEach(angular.mock.module('pascalprecht.translate'));
             beforeEach(angular.mock.module('component.service.menu'));
             beforeEach(angular.mock.module(require('./index.js')));
             beforeEach(inject(function ($rootScope, $compile, menuService) {

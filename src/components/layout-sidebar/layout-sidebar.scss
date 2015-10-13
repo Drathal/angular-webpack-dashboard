@@ -49,9 +49,15 @@ md-menu-item {
     display: inline-block;
 }
 
-.translate-cloak {
-    display: none;
+.sidebar-toolbar .md-toolbar-tools h1 {
+    margin-left: 10px;
 }
+
+.sidebar-toolbar .md-toolbar-tools img {
+    width:30px;
+}
+
+
 
 .white {
     background-color: #fff;

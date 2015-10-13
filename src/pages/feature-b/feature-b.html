@@ -1,15 +1,13 @@
 <div layout-margin>
 
-    <h1>{{ 'FEATUREB.HEADING' | translate }}</h1>
+    <h1 translate>Feature B</h1>
+    <h2 translate>Feature B is implemented as Component using "Component Pattern"</h2>
+    <p translate>Feature is so great that it even contains counter functionality! It also contains: {{ ctrl.property }}</p>
 
-    <span ng-bind-html="'FEATUREB.INTROTEXT' | translate:ctrl "></span>
-
-    <span bind-html-compile="'FEATUREB.USERINFO' | translate:ctrl "></span>
-
-    <p>User Overloading: <span ui-user-info scope-overload="{ 'name' : 'Lucy' }"></span></p>
-    <p>User Overloading: <span ui-user-info scope-overload="{ 'name' : '{{ctrl.property}}' }"></span></p>
+    <p><span translate>User Overloading: </span><span ui-user-info scope-overload="{ 'name' : 'Lucy' }"></span></p>
+    <p><span translate>User Overloading: </span><span ui-user-info scope-overload="{ 'name' : '{{ctrl.property}}' }"></span></p>
 
     <span counter></span>
-    <md-button class="md-raised md-primary" ui-sref="app.layout-sidebar.feature-a">Try Feature A</md-button>
+    <md-button class="md-raised md-primary" ui-sref="app.layout-sidebar.feature-a" translate>Try Feature A</md-button>
 
 </div>

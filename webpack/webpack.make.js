@@ -73,6 +73,10 @@ module.exports = function makeWebpackConfig(options) {
             {
                 test: /\.json(\?.*)?$/,
                 loader: 'json'
+            },
+            {
+                test: /\.po$/,
+                loader: 'json!angular-gettext?format=json'
             }
         ]
     };

@@ -3,8 +3,7 @@ require('./userinfo.scss');
 
 module.exports = angular
     .module('component.ui.userInfo', [
-        require('angular-material'),
-        require('angular-translate')
+        require('angular-material')
     ])
     .directive('uiUserInfo', function () {
         return {
@@ -15,7 +14,7 @@ module.exports = angular
             template: require('./userinfo.html')
         };
     })
-    .config(function (translationLoaderProvider) {
-        translationLoaderProvider.add(__dirname);
+    .config(function () {
+
     })
     .name;

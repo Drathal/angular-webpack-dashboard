@@ -1,12 +1,11 @@
-<div layout-margin>
+<div class="layout-margin">
 
-    <h1>{{ 'FEATUREA.HEADING' | translate }}</h1>
+    <h1 translate>Feature A</h1>
+    <h2 translate>Feature A is implemented using controller and template which are bound together in ui-router state definition</h2>
+    <p translate>Feature is so great that you won't believe! It also contains: {{ ctrl.property }}</p>
 
-    <span ng-bind-html=" 'FEATUREA.INTROTEXT' | translate:ctrl  "></span>
-    <pre>Resolved Data:
-{{ ctrl.data }}
-    </pre>
+    <pre translate>Resolved Data:{{ ctrl.data }}</pre>
 
-    <md-button class="md-raised md-primary" ui-sref="app.layout-sidebar.feature-b">{{ 'FEATUREA.TRYFEATUREB' | translate }}</md-button>
+    <md-button class="md-raised md-primary" ui-sref="app.layout-sidebar.feature-b" translate>Try Feature B</md-button>
 
 </div>

@@ -1,32 +1,9 @@
-// jscs:disable requireCamelCaseOrUpperCaseIdentifiers
-
-module.exports = /* @ngInject */ function ($urlRouterProvider, $stateProvider, $translateProvider, APPCONFIG, translationLoaderProvider, $mdThemingProvider, cfpLoadingBarProvider) {
-
-    translationLoaderProvider.add(__dirname);
-
-    $urlRouterProvider.otherwise('/login');
+module.exports = /* @ngInject */ function ($urlRouterProvider, $stateProvider, $mdThemingProvider, cfpLoadingBarProvider) {
 
     $stateProvider
         .state('app', {
             abstract: true
         });
-
-    var languageKeys = [];
-    for (var i = 0; i < APPCONFIG.languages.length; i++) {
-        languageKeys.push(APPCONFIG.languages[i].key);
-    }
-
-    $translateProvider
-        .registerAvailableLanguageKeys(languageKeys, {
-            en_US: 'en',
-            en_UK: 'en'
-        })
-        .useLoader('translationLoader')
-        .useLoaderCache(true)
-        .usePostCompiling(true)
-        .useSanitizeValueStrategy()
-        .determinePreferredLanguage()
-        .useLocalStorage();
 
     cfpLoadingBarProvider.includeSpinner = true;
     cfpLoadingBarProvider.includeBar = true;

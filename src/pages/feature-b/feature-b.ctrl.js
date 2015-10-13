@@ -1,5 +1,3 @@
-module.exports = function() {
-
-    this.property = 'Feature B Controller Property';
-
+module.exports = function(gettextCatalog) {
+    this.property = gettextCatalog.getString('Feature B Controller Property');
 };

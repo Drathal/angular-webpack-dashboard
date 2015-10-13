@@ -10,9 +10,6 @@ describe('component', function () {
                 controller = new CounterCtrl();
             });
 
-            it('should have a demo property', function () {
-                expect(controller.property).to.be.a('string');
-            });
 
             it('should increment the counter', function () {
                 expect(controller.increment).to.be.a('function');
@@ -27,7 +24,6 @@ describe('component', function () {
             var element;
             var $scope;
 
-            beforeEach(angular.mock.module('component.service.translationLoader'));
             beforeEach(angular.mock.module(require('./index.js')));
             beforeEach(inject(function ($rootScope, $compile) {
                 element = angular.element('<counter></counter>');

@@ -1,8 +1,0 @@
-{
-  "FEATUREA": {
-    "HOME" : "Zuhause",
-    "HEADING": "Feature A!",
-    "INTROTEXT": "<h2>Feature A hat einen Kontroller und ein Template und nutzt den ui-router</h2><br /><p>Es ist ein Tolles Feature! Und es kann Kontroller Werte anzeigen: {{ property }}</p>",
-    "TRYFEATUREB" : "Teste auch Feature B"
-  }
-}

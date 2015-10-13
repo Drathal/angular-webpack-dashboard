@@ -7,17 +7,13 @@ describe('component', function () {
             var layout;
             var rootScope;
             var controller;
-            var translate;
             var mdSidenav;
             var toggle;
             var close;
 
-            beforeEach(angular.mock.module('component.service.translationLoader'));
-            beforeEach(angular.mock.module('pascalprecht.translate'));
             beforeEach(angular.mock.module('ngMaterial'));
-            beforeEach(inject(function ($rootScope, $translate, $mdSidenav) {
+            beforeEach(inject(function ($rootScope, $mdSidenav) {
                 rootScope = $rootScope;
-                translate = $translate;
                 toggle = sinon.stub();
                 close = sinon.stub();
                 $mdSidenav = () => {
@@ -28,7 +24,7 @@ describe('component', function () {
                 };
                 mdSidenav = $mdSidenav;
                 layout = new LayoutSidebar();
-                controller = new layout.controller($rootScope, $translate, $mdSidenav);
+                controller = new layout.controller($rootScope, $mdSidenav);
                 $rootScope.$digest();
             }));
 
@@ -55,7 +51,6 @@ describe('component', function () {
             var $scope;
 
             beforeEach(angular.mock.module('ui.router'));
-            beforeEach(angular.mock.module('pascalprecht.translate'));
             beforeEach(angular.mock.module('ngMaterial'));
             beforeEach(angular.mock.module(require('./index.js')));
             beforeEach(inject(function ($rootScope, $compile) {
