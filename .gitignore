@@ -4,7 +4,7 @@ coverage
 npm-debug.log
 phantomjsdriver.log
 stats.json
-translation/*.mo
+src/translation/*.mo
 
 # JetBrains
 .idea/workspace.xml
