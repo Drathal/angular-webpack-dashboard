@@ -91,7 +91,7 @@ msgid ""
 "Feature is so great that it even contains counter functionality! It also "
 "contains: {{ ctrl.property }}"
 msgstr ""
-"Funktion ist so toll, dass es sogar Zähler Funktionalität enthält! Es "
+"Funktion ist so toll, dass sie sogar Zähler Funktionalität enthält! Es "
 "enthält auch: {{ctrl.property}}"
 
 #: src/pages/feature-a/feature-a.html:5
@@ -99,7 +99,7 @@ msgid ""
 "Feature is so great that you won't believe! It also contains: {{ ctrl."
 "property }}"
 msgstr ""
-"Funktion ist so toll, dass Sie werden nicht glauben! Es enthält auch: "
+"Das Feature ist so toll, sie werden es kaum glauben! Sie enthält auch: "
 "{{ctrl.property}}"
 
 #: src/pages/chart-test/chart-test.route.js:54
