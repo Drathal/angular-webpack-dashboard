@@ -1,5 +1,0 @@
-<component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="translate:extract" type="NodeJSConfigurationType" factoryName="Node.js" singleton="false" path-to-node="C:/Program Files/nodejs/node" path-to-js-file="C:/Program Files/nodejs/node_modules/npm/bin/npm-cli.js" application-parameters="run translate:extract" working-dir="$PROJECT_DIR$">
-    <method />
-  </configuration>
-</component>
