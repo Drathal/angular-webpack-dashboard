@@ -13,7 +13,7 @@ module.exports.component = /*@ngInject*/ function (gettextCatalog, APPCONFIG, lo
 
             for (var i = 0; i < APPCONFIG.languages.length; i++) {
                 langIso = APPCONFIG.languages[i].key;
-                if (langIso == userLang && !localStorageService.get(storageProperty)) {
+                if (langIso === userLang && !localStorageService.get(storageProperty)) {
                     gettextCatalog.setCurrentLanguage(userLang);
                 }
             }

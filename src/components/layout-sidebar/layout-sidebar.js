@@ -30,7 +30,7 @@ class LayoutSidebar {
 
     static directive() {
         'ngInject';
-        return LayoutSidebar.instance = new LayoutSidebar();
+        return new LayoutSidebar();
     }
 
 }

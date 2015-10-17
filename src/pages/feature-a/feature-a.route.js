@@ -1,4 +1,4 @@
-module.exports.config = /* @ngInject */ function ($stateProvider, gettext) {
+module.exports = /* @ngInject */ function ($stateProvider, gettext) {
 
     $stateProvider.state('app.layout-sidebar.feature-a', {
         url: '/feature-a',
@@ -8,7 +8,7 @@ module.exports.config = /* @ngInject */ function ($stateProvider, gettext) {
                 template: '<span translate>' + gettext('Feature A') + '</span>'
             },
             '': {
-                controller: /* @ngInject */ function ($scope, data) {
+                controller: /* @ngInject */ function (data) {
                     this.data = data;
                 },
                 controllerAs: 'featureAState',
@@ -20,18 +20,6 @@ module.exports.config = /* @ngInject */ function ($stateProvider, gettext) {
                 }
             }
         }
-    });
-
-};
-
-module.exports.run = /* @ngInject */ function (menuService, gettext) {
-
-    menuService.addMenu({
-        /// Menu Title
-        name: gettext('Feature A'),
-        icon: 'home',
-        state: 'app.layout-sidebar.feature-a',
-        type: 'link'
     });
 
 };

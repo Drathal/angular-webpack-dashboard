@@ -14,7 +14,7 @@ class LayoutFull {
     }
 
     static directive() {
-        return LayoutFull.instance = new LayoutFull();
+        return new LayoutFull();
     }
 
 }
