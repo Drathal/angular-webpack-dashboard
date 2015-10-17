@@ -123,12 +123,11 @@ module.exports = function makeWebpackConfig(options) {
             _: 'lodash'
         }),
         new HtmlWebpackPlugin({
-            title: 'Webpack Angular',
+            title: 'Webpack Angular Dashboard',
             template: './src/index.html',
             hash: true,
             inject: 'body',
-            favicon: './src/assets/image/favicon.ico',
-            minify: BUILD
+            favicon: './src/assets/image/favicon.ico'
         })
     ];
 
@@ -143,9 +142,7 @@ module.exports = function makeWebpackConfig(options) {
             'angular-animate',
             'angular-aria',
             'angular-sanitize',
-            'angular-translate',
-            'angular-translate-storage-cookie',
-            'angular-translate-storage-local',
+            'angular-gettext',
             'angular-ui-router',
             'angular-cookies',
             'angular-local-storage',

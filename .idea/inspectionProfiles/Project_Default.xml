@@ -5,7 +5,7 @@
     <inspection_tool class="HtmlUnknownAttribute" enabled="true" level="WARNING" enabled_by_default="true">
       <option name="myValues">
         <value>
-          <list size="15">
+          <list size="16">
             <item index="0" class="java.lang.String" itemvalue="layout-fill" />
             <item index="1" class="java.lang.String" itemvalue="layout" />
             <item index="2" class="java.lang.String" itemvalue="flex" />
@@ -21,6 +21,7 @@
             <item index="12" class="java.lang.String" itemvalue="ng-message" />
             <item index="13" class="java.lang.String" itemvalue="bind-html-compile" />
             <item index="14" class="java.lang.String" itemvalue="translate-n" />
+            <item index="15" class="java.lang.String" itemvalue="translate-plural" />
           </list>
         </value>
       </option>

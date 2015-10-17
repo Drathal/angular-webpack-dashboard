@@ -1,15 +1,15 @@
 require('./chart-test.scss');
 
-module.exports.config = /*@ngInject*/ function ($stateProvider, gettext) {
+module.exports.config = /* @ngInject */ function ($stateProvider, gettext) {
 
     $stateProvider.state('app.layout-sidebar.charttest', {
         url: '/charttest',
         views: {
             'toolbar-title': {
-                template: gettext('Chart Sample')
+                template: '<span translate>' + gettext('Chart Sample') + '</span>'
             },
             '': {
-                controller: function ($scope, data1, data2, $timeout, $interval, $mdMedia, $window, $document) {
+                controller: /* @ngInject */ function ($scope, data1, data2, $timeout, $interval, $mdMedia, $window, $document) {
 
                     $scope.$watch(function () {
                         return $mdMedia('gt-md');

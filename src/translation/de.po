@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "POT-Creation-Date: \n"
 "PO-Revision-Date: \n"
-"Last-Translator: \n"
+"Last-Translator: Markus Dethlefsen <dethlefsen@cleverbridge.com>\n"
 "Language-Team: \n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
@@ -28,11 +28,16 @@ msgstr "Diagramm-Beispiel"
 msgid "Charts"
 msgstr "Diagramm"
 
+#: src/components/counter-ui/counter.html:4
+msgid "counter--"
+msgstr "counter--"
+
+# Noch in Test Kommentar
 #: src/components/counter-ui/counter.html:2
-msgid "Counter: <b>{{ctrl.count}}</b> point"
-msgid_plural "Counter: <b>{{ctrl.count}}</b> points"
-msgstr[0] "Zähler: <b>{{ctrl.count}}</b> Punkt"
-msgstr[1] "Zähler: <b>{{ctrl.count}}</b> Punkte"
+msgid "Counter: <b>{{ counter.count }}</b> point"
+msgid_plural "Counter: <b>{{ counter.count }}</b> points"
+msgstr[0] "Zähler: <b>{{counter.count}}</b> Punkt"
+msgstr[1] "Zähler: <b>{{counter.count}}</b> Punkte"
 
 #: src/components/counter-ui/counter.html:3
 msgid "counter++"
@@ -46,17 +51,13 @@ msgstr "Erstelle einen Account"
 msgid "Dashboard"
 msgstr "Dashboard"
 
-#: src/components/app/app.constants.js:9
-msgid "English"
-msgstr "Englisch"
-
 #. Menu Title
 #. Toolbar Title
 #: src/pages/feature-a/feature-a.html:3
 #: src/pages/feature-a/feature-a.route.js:31
 #: src/pages/feature-a/feature-a.route.js:8
 msgid "Feature A"
-msgstr "Feature"
+msgstr "Feature A"
 
 #: src/pages/feature-a/feature-a.html:4
 msgid ""
@@ -110,10 +111,6 @@ msgstr "Februar"
 msgid "Forgot password?"
 msgstr "Passwort vergessen?"
 
-#: src/components/app/app.constants.js:13
-msgid "German"
-msgstr "Deutsch"
-
 #: src/components/userinfo-ui/userinfo.html:5
 msgid "Hallo, {{ ctrl.name }}"
 msgstr "Hallo, {{ctrl.name}}"
@@ -130,6 +127,7 @@ msgstr "Juli"
 msgid "June"
 msgstr "Juni"
 
+# Test Comment from POEDIT
 #: src/pages/chart-test/chart-test.page.html:18
 msgid "Last 60 Seconds"
 msgstr "Letzten 60 Sekunden"
@@ -199,6 +197,17 @@ msgstr "Benutzer überladen:"
 #: src/pages/login/login.html:10 src/pages/login/login.html:11
 msgid "Username"
 msgstr "Benutzername"
+
+#~ msgid "Counter: <b>{{ctrl.count}}</b> point"
+#~ msgid_plural "Counter: <b>{{ctrl.count}}</b> points"
+#~ msgstr[0] "Zähler: <b>{{ctrl.count}}</b> Punkt"
+#~ msgstr[1] "Zähler: <b>{{ctrl.count}}</b> Punkte"
+
+#~ msgid "English"
+#~ msgstr "Englisch"
+
+#~ msgid "German"
+#~ msgstr "Deutsch"
 
 # test commentar
 #~ msgctxt "cccccccccccccccc"

@@ -1,11 +1,16 @@
-module.exports = /*@ngInject*/ function () {
+module.exports = /* @ngInject */ function () {
 
-    var self = this;
     this.count = 0;
 
-    this.increment = function () {
-        self.count++;
+    this.increment = () => {
+        this.count++;
+    };
+
+    this.decrement = () => {
+        if (this.count < 1) {
+            return;
+        }
+        this.count--;
     };
 
 };
-

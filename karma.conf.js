@@ -4,6 +4,8 @@ module.exports = function karmaConfig(config) {
     config.set({
 
         basePath: '',
+        port: 9999,
+        runnerPort: 9998,
 
         frameworks: [
             'mocha',
@@ -67,7 +69,7 @@ module.exports = function karmaConfig(config) {
         colors: true,
 
         // values: config.LOG_DISABLE || config.LOG_ERROR || config.LOG_WARN || config.LOG_INFO || config.LOG_DEBUG
-        logLevel: config.LOG_ERROR
+        logLevel: config.LOG_DEBUG
 
     });
 };

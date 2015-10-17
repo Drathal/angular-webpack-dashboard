@@ -3,7 +3,7 @@ require('./language-select.scss');
 
 module.exports = angular
     .module('component.ui.languageSelect', [
-        require('angular-material')
+        require('angular-material'),
     ])
     .directive('uiLanguageSelect', function () {
         return {
@@ -12,8 +12,5 @@ module.exports = angular
             bindToController: true,
             template: require('./language-select.html')
         };
-    })
-    .config(function () {
-
     })
     .name;

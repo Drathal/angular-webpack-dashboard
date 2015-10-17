@@ -4,7 +4,7 @@ module.exports.config = /*@ngInject*/ function($stateProvider, gettext) {
         url: '/feature-b',
         views: {
             'toolbar-title': {
-                template: gettext('Feature B')
+                template: '<span translate>' + gettext('Feature B') + '</span>'
             },
             '': {
                 template: '<div class="md-whiteframe-z1 white" layout-margin><feature-b></feature-b></div>'

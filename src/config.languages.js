@@ -1,6 +1,6 @@
-module.exports.name = 'APPCONFIG';
-module.exports.value = (function () {
+module.exports = (function () {
 
+    /* fake gettext function - translation will be done in $scope / contoller */
     var gettext = function(text) { return text; };
 
     return {

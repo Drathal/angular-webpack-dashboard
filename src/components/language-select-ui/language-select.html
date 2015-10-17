@@ -6,9 +6,10 @@
 
     <md-menu-content width="4">
 
-        <md-menu-item ng-repeat="menuItem in ctrl.languages track by menuItem.key">
-            <md-button ng-click="ctrl.changeLanguage(menuItem.key)">
+        <md-menu-item ng-repeat="menuItem in ctrl.languages track by menuItem.key" ng-click="ctrl.changeLanguage(menuItem.key)">
+            <md-button>
                 <span class="flag-icon flag-icon-{{  menuItem.icon || menuItem.key }}"></span>&nbsp;{{ menuItem.name | translate }}
+                <span ng-show="ctrl.currentLanguage() === menuItem.key">&lt;</span>
             </md-button>
         </md-menu-item>
 

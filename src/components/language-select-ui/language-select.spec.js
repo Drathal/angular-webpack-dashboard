@@ -3,13 +3,36 @@ var LanguageSelectCtrl = require('./language-select.ctrl');
 describe('component', function () {
     describe('language select', function () {
 
-        describe.skip('controller', function () {
+        describe('controller', function () {
             var controller;
             var langKey;
             var open;
 
-            before(function () {
-                controller = new LanguageSelectCtrl();
+            beforeEach(function () {
+                var languageService = {
+                    getLanguages: function () {
+                        return [
+                            {
+                                name: 'English',
+                                key: 'en',
+                                icon: 'gb'
+                            }, {
+                                name: 'German',
+                                key: 'de'
+                            }
+                        ];
+                    },
+                    getCurrentLanguage: function () {
+                        return 'de';
+                    },
+                    setCurrentLanguage: function (lang) {
+                        langKey = lang;
+                    }
+
+                };
+
+                controller = new LanguageSelectCtrl(languageService);
+
             });
 
             it('should have a changeLanguage function', function () {
@@ -21,7 +44,6 @@ describe('component', function () {
             });
 
             it('should open the language menu', function () {
-
                 controller.openLanguageMenu(function () {
                     open = true;
                 }, 'event');
@@ -38,13 +60,33 @@ describe('component', function () {
 
         });
 
-        describe.skip('directive', function () {
+        describe('directive', function () {
 
             var element;
             var $scope;
 
             beforeEach(function () {
+                require('angular-gettext');
+                angular.mock.module('gettext');
+                require('angular-local-storage');
+                angular.mock.module('LocalStorageModule');
+                angular.mock.module(require('../language-service/index.js'));
                 angular.mock.module(require('./index.js'));
+                angular.mock.module(function ($provide) {
+                    $provide.value('APPCONFIG', {
+                        languages: [
+                            {
+                                name: 'English',
+                                key: 'en',
+                                icon: 'gb'
+                            }, {
+                                name: 'German',
+                                key: 'de'
+                            }
+                        ]
+                    });
+
+                });
                 angular.mock.inject(function ($rootScope, $compile) {
                     element = angular.element('<ui-language-select></ui-language-select>');
                     $scope = $rootScope;

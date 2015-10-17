@@ -1,4 +1,5 @@
 <p>
-    <span translate translate-n="ctrl.count" translate-plural="Counter: <b>{{ctrl.count}}</b> points">Counter: <b>{{ctrl.count}}</b> point</span>
-    <md-button class="md-raised" ng-click="ctrl.increment()">{{ 'counter++' | translate }}</md-button>
+    <span translate-n="counter.count" translate-plural="Counter: <b>{{ counter.count }}</b> points" translate>Counter: <b>{{ counter.count }}</b> point</span>
+    <md-button class="md-raised" ng-click="counter.increment()">{{ 'counter++' | translate }}</md-button>
+    <md-button class="md-raised" ng-click="counter.decrement()">{{ 'counter--' | translate }}</md-button>
 </p>

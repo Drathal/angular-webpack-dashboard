@@ -22,7 +22,7 @@ module.exports = function () {
 
             loaders: [
                 {test: /\.js$/, loader: 'babel-loader', exclude: [/node_modules/]},
-                {test: /\.(jpe?g|png|gif|svg|woff|woff2|ttf|eot|ico)$/, loader: 'null'},
+                {test: /\.(jpe?g|png|gif|svg|woff|woff2|ttf|eot|ico)$/, loader: 'url-loader'},
                 {test: /\.(scss|css)$/, loader: 'null'},
                 {test: /\.json(\?.*)?$/, loader: 'json'},
                 {test: /\.html$/, loader: 'html'},
@@ -32,7 +32,7 @@ module.exports = function () {
 
         resolve: {
             root: __dirname + '/src',
-            modulesDirectories: [require('path').join(__dirname, '../', 'node_modules')],
+            modulesDirectories: [path.join(__dirname, '../', 'node_modules')],
             alias: {
                 angular: path.join(__dirname, '../node_modules/angular/index.js')
             }

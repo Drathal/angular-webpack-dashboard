@@ -1,21 +1,27 @@
+var template = require('./layout-sidebar.html');
+
 class LayoutSidebar {
 
     /*@ngInject*/
     constructor() {
         this.restrict = 'AE';
         this.transclude = true;
-        this.template = require('./layout-sidebar.html');
+        this.template = template;
         this.controllerAs = 'layoutSidebar';
     }
 
-    controller($rootScope, $mdSidenav) {
+    controller($rootScope, $scope, $mdSidenav) {
 
         'ngInject';
 
         this.title = 'APP.SIDEBAR_TITLE';
 
-        $rootScope.$on('$locationChangeSuccess', () => {
+        var unbindChangeSuccess = $rootScope.$on('$locationChangeSuccess', () => {
             $mdSidenav('left').close();
+        });
+
+        $scope.$on('$destroy', () => {
+            unbindChangeSuccess();
         });
 
         this.toggleSidebar = () => {

@@ -2,5 +2,5 @@
            ui-sref="{{ ::menuItem.state }}"
            ui-sref-active="active">
     <md-icon md-font-set="material-icons">{{ ::menuItem.icon }}</md-icon>
-    <span>{{ menuItem.name }}</span>
+    <span>{{ menuItem.name | translate  }}</span>
 </md-button>

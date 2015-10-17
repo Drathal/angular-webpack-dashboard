@@ -6,7 +6,7 @@ module.exports = angular
         return {
             scope: {},
             controller: require('./counter.ctrl'),
-            controllerAs: 'ctrl',
+            controllerAs: 'counter',
             bindToController: true,
             template: require('./counter.html')
         };

@@ -20,9 +20,13 @@ msgstr ""
 msgid "Charts"
 msgstr ""
 
+#: ./src/components/counter-ui/counter.html:4
+msgid "counter--"
+msgstr ""
+
 #: ./src/components/counter-ui/counter.html:2
-msgid "Counter: <b>{{ctrl.count}}</b> point"
-msgid_plural "Counter: <b>{{ctrl.count}}</b> points"
+msgid "Counter: <b>{{ counter.count }}</b> point"
+msgid_plural "Counter: <b>{{ counter.count }}</b> points"
 msgstr[0] ""
 msgstr[1] ""
 
@@ -36,10 +40,6 @@ msgstr ""
 
 #: ./src/components/layout-sidebar/layout-sidebar.html:7
 msgid "Dashboard"
-msgstr ""
-
-#: ./src/components/app/app.constants.js:9
-msgid "English"
 msgstr ""
 
 #. Menu Title
@@ -87,10 +87,6 @@ msgstr ""
 
 #: ./src/pages/login/login.html:32
 msgid "Forgot password?"
-msgstr ""
-
-#: ./src/components/app/app.constants.js:13
-msgid "German"
 msgstr ""
 
 #: ./src/components/userinfo-ui/userinfo.html:5

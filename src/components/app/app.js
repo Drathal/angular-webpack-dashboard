@@ -1,5 +1,6 @@
 class App {
 
+    /* @ngInject */
     constructor($compile) {
         this.restrict = 'A';
         this.controllerAs = 'app';
@@ -22,12 +23,11 @@ class App {
     }
 
     static directive($compile) {
-        App.instance = new App($compile);
-        return App.instance;
+        'ngInject';
+        return new App($compile);
+
     }
 
 }
-
-App.directive.$inject = ['$compile'];
 
 export { App };

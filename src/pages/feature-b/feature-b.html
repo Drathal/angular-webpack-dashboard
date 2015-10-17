@@ -5,7 +5,7 @@
     <p translate>Feature is so great that it even contains counter functionality! It also contains: {{ ctrl.property }}</p>
 
     <p><span translate>User Overloading: </span><span ui-user-info scope-overload="{ 'name' : 'Lucy' }"></span></p>
-    <p><span translate>User Overloading: </span><span ui-user-info scope-overload="{ 'name' : '{{ctrl.property}}' }"></span></p>
+    <p><span translate>User Overloading: </span><span ui-user-info scope-overload="{ 'name' : '{{ ctrl.property | translate }}' }"></span></p>
 
     <span counter></span>
     <md-button class="md-raised md-primary" ui-sref="app.layout-sidebar.feature-a">{{ 'Try Feature A' | translate }}</md-button>

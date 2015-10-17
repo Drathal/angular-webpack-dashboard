@@ -11,22 +11,26 @@ describe('component', function () {
             var toggle;
             var close;
 
-            beforeEach(angular.mock.module('ngMaterial'));
-            beforeEach(inject(function ($rootScope, $mdSidenav) {
-                rootScope = $rootScope;
-                toggle = sinon.stub();
-                close = sinon.stub();
-                $mdSidenav = () => {
-                    return {
-                        toggle: toggle,
-                        close: close
+            beforeEach(function () {
+                angular.mock.module(require('angular-material'));
+                angular.mock.module(require('angular-ui-router'));
+                angular.mock.module(require('./index.js'));
+                angular.mock.inject(function ($rootScope, $compile, $mdSidenav) {
+                    rootScope = $rootScope;
+                    toggle = sinon.stub();
+                    close = sinon.stub();
+                    $mdSidenav = () => {
+                        return {
+                            toggle: toggle,
+                            close: close
+                        };
                     };
-                };
-                mdSidenav = $mdSidenav;
-                layout = new LayoutSidebar();
-                controller = new layout.controller($rootScope, $mdSidenav);
-                $rootScope.$digest();
-            }));
+                    mdSidenav = $mdSidenav;
+                    layout = new LayoutSidebar();
+                    controller = new layout.controller($rootScope, $mdSidenav);
+                    $rootScope.$digest();
+                });
+            });
 
             it('should have a toggleSidebar function', function () {
                 expect(controller.toggleSidebar).to.be.a('function');
@@ -50,15 +54,17 @@ describe('component', function () {
             var element;
             var $scope;
 
-            beforeEach(angular.mock.module('ui.router'));
-            beforeEach(angular.mock.module('ngMaterial'));
-            beforeEach(angular.mock.module(require('./index.js')));
-            beforeEach(inject(function ($rootScope, $compile) {
-                element = angular.element('<layout-sidebar></layout-sidebar>');
-                $scope = $rootScope;
-                $compile(element)($scope);
-                $scope.$digest();
-            }));
+            beforeEach(function () {
+                angular.mock.module(require('angular-material'));
+                angular.mock.module(require('angular-ui-router'));
+                angular.mock.module(require('./index.js'));
+                angular.mock.inject(function ($rootScope, $compile) {
+                    element = angular.element('<layout-sidebar></layout-sidebar>');
+                    $scope = $rootScope;
+                    $compile(element)($scope);
+                    $scope.$digest();
+                });
+            });
 
             it('should render the app directive', function () {
                 expect($(element).find('md-sidenav').length).to.equal(1);
