@@ -69,7 +69,7 @@ module.exports = function karmaConfig(config) {
         colors: true,
 
         // values: config.LOG_DISABLE || config.LOG_ERROR || config.LOG_WARN || config.LOG_INFO || config.LOG_DEBUG
-        logLevel: config.LOG_DEBUG
+        logLevel: config.LOG_ERROR
 
     });
 };

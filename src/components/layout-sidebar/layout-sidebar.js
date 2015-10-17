@@ -14,8 +14,6 @@ class LayoutSidebar {
 
         'ngInject';
 
-        this.title = 'APP.SIDEBAR_TITLE';
-
         var unbindChangeSuccess = $rootScope.$on('$locationChangeSuccess', () => {
             $mdSidenav('left').close();
         });

@@ -45,8 +45,11 @@ describe('component', function () {
                 expect(close.called).to.equal(true);
             });
 
-            it('should set a title', function () {
-                expect(controller.title).to.be.a('string');
+            it('should unbind $locationChangeSuccess event', function () {
+                scope.$broadcast('$destroy');
+                scope.$digest();
+                rootScope.$emit('$locationChangeSuccess');
+                expect(close.called).to.equal(false);
             });
 
         });

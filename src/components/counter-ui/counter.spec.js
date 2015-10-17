@@ -6,7 +6,7 @@ describe('component', function () {
         describe('controller', function () {
             var controller;
 
-            before(function () {
+            beforeEach(function () {
                 controller = new CounterCtrl();
             });
 
@@ -15,6 +15,19 @@ describe('component', function () {
                 expect(controller.count).to.equal(0);
                 controller.increment();
                 expect(controller.count).to.equal(1);
+            });
+
+            it('should decrement the counter', function () {
+                expect(controller.count).to.equal(0);
+                controller.increment();
+                expect(controller.count).to.equal(1);
+                controller.decrement();
+                expect(controller.count).to.equal(0);
+            });
+
+            it('should not decrement below 0', function () {
+                controller.decrement();
+                expect(controller.count).to.equal(0);
             });
         });
 

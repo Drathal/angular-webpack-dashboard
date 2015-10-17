@@ -1,6 +1,6 @@
 var angular = require('angular');
 
-module.exports.component = /*@ngInject*/ function (gettextCatalog, APPCONFIG, localStorageService, $window, $timeout) {
+module.exports.component = /*@ngInject*/ function (gettextCatalog, APPCONFIG, localStorageService, $window) {
 
     var storageProperty = 'dashboardLang';
 
