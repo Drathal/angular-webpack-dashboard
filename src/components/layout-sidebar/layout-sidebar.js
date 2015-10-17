@@ -20,7 +20,7 @@ class LayoutSidebar {
             $mdSidenav('left').close();
         });
 
-        $scope.$on('$destroy', () => {
+        $scope.$on('$destroy', function () {
             unbindChangeSuccess();
         });
 

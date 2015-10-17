@@ -6,6 +6,7 @@ describe('component', function () {
         describe('controller', function () {
             var layout;
             var rootScope;
+            var scope;
             var controller;
             var mdSidenav;
             var toggle;
@@ -16,7 +17,8 @@ describe('component', function () {
                 angular.mock.module(require('angular-ui-router'));
                 angular.mock.module(require('./index.js'));
                 angular.mock.inject(function ($rootScope, $compile, $mdSidenav) {
-                    rootScope = $rootScope;
+                    rootScope = $rootScope.$new();
+                    scope = $rootScope.$new();
                     toggle = sinon.stub();
                     close = sinon.stub();
                     $mdSidenav = () => {
@@ -27,7 +29,7 @@ describe('component', function () {
                     };
                     mdSidenav = $mdSidenav;
                     layout = new LayoutSidebar();
-                    controller = new layout.controller($rootScope, $mdSidenav);
+                    controller = new layout.controller($rootScope, scope, $mdSidenav);
                     $rootScope.$digest();
                 });
             });
