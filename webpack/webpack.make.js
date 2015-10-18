@@ -137,8 +137,13 @@ module.exports = function makeWebpackConfig(options) {
         config.entry.vendor = [
             'jquery',
             'lodash',
+            'd3',
+            'nvd3',
             'angular',
+            'angular-nvd3',
             'angular-material',
+            'angular-messages',
+            'angular-resource',
             'angular-animate',
             'angular-aria',
             'angular-sanitize',
@@ -154,7 +159,7 @@ module.exports = function makeWebpackConfig(options) {
             new Clean(['../build']),
             new webpack.NoErrorsPlugin(),
             new webpack.optimize.CommonsChunkPlugin({name: 'vendor', filename: 'vendor.[hash].js'}),
-            new webpack.optimize.MinChunkSizePlugin({minChunkSize: 1000}),
+            //new webpack.optimize.MinChunkSizePlugin({minChunkSize: 1000}),
             new webpack.optimize.OccurenceOrderPlugin(true),
             new webpack.optimize.DedupePlugin(),
             new webpack.optimize.UglifyJsPlugin({compress: {warnings: false}})
