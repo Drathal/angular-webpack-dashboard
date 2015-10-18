@@ -6,7 +6,7 @@ describe('component', function () {
             var element;
             var $scope;
 
-            beforeEach(angular.mock.module('ui.router'));
+            beforeEach(angular.mock.module(require('angular-ui-router')));
             beforeEach(angular.mock.module(require('./index.js')));
             beforeEach(inject(function ($rootScope, $compile) {
                 element = angular.element('<layout-full></layout-full>');

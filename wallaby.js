@@ -28,6 +28,7 @@ module.exports = function (wallaby) {
             {pattern: 'node_modules/karma-sinon-chai/node_modules/sinon-chai/lib/sinon-chai.js', instrument: false},
 
             {pattern: 'src/assets/**/*', instrument: false},
+            {pattern: 'src/translation/**/*.po', instrument: false},
 
             // Faster start than with scanning all node modules for style files
             {pattern: 'node_modules/angular-material/angular-material.scss', load: false},
