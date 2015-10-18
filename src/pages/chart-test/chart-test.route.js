@@ -1,6 +1,6 @@
 require('./chart-test.scss');
 
-module.exports.config = /* @ngInject */ function ($stateProvider, gettext) {
+module.exports = /* @ngInject */ function ($stateProvider, gettext) {
 
     $stateProvider.state('app.layout-sidebar.charttest', {
         url: '/charttest',
@@ -9,93 +9,10 @@ module.exports.config = /* @ngInject */ function ($stateProvider, gettext) {
                 template: '<span translate>' + gettext('Chart Sample') + '</span>'
             },
             '': {
-                controller: /* @ngInject */ function ($scope, data1, data2, $timeout, $interval, $mdMedia, $window, $document) {
-
-                    $scope.$watch(function () {
-                        return $mdMedia('gt-md');
-                    }, function () {
-                        $timeout(function () {
-                            jQuery($document.find('body')[0]).trigger('resize');
-                        }, 400);
-                    });
-
-                    var self = this;
-
-                    var random = function () {
-                        return Math.floor((Math.random() * 100) + 1);
-                    };
-
-                    $timeout(function () {
-                        self.data1 = data1;
-                        self.data2 = data2;
-                    }, 100);
-
-                    $interval(function () {
-                        self.data1.data = [
-                            [random(), random(), random(), random(), random(), random(), random()],
-                            [random(), random(), random(), random(), random(), random(), random()]
-                        ];
-                    }, 5000);
-
-                    $interval(function () {
-                        self.data2.data[0].push(random());
-                        self.data2.data[0].shift(random());
-                        self.data2.data[1].push(random());
-                        self.data2.data[1].shift(random());
-                    }, 1000);
-
-                },
-
-                controllerAs: 'chartTestState',
-                template: require('./chart-test.page.html'),
-                resolve: {
-                    data1: function () {
-                        return {
-                            labels: [gettext('January'), gettext('February'), gettext('March'), gettext('April'), gettext('May'), gettext('June'), gettext('July')],
-                            series: [gettext('Series A'), gettext('Series B')],
-                            data: [
-                                [65, 59, 80, 81, 56, 55, 100],
-                                [0, 48, 40, 19, 86, 27, 90]
-                            ],
-                            options: {
-                                datasetFill: false,
-                                maintainAspectRatio: false,
-                                responsive: true,
-                                animation: true
-                            }
-                        };
-                    },
-
-                    data2: function () {
-                        return {
-                            labels: ['-60', '-55', '-50', '-45', '-40', '-35', '-30', '-25', '-20', '-15', '-10', '-5', 'now'],
-                            series: [gettext('Series A'), gettext('Series B')],
-                            data: [
-                                [65, 59, 100, 81, 56, 55, 40, 65, 59, 100, 81, 56, 55, 40],
-                                [28, 48, 40, 19, 0, 27, 90, 28, 48, 40, 19, 0, 27, 90]
-                            ],
-                            options: {
-                                datasetFill: true,
-                                maintainAspectRatio: false,
-                                responsive: true,
-                                animation: false
-                            }
-                        };
-                    }
-                }
+                template: require('./chart-test.page.html')
             }
         }
     });
 
 };
 
-module.exports.run = /*@ngInject*/ function (menuService, gettext) {
-
-    menuService.addMenu({
-        name: gettext('Charts'),
-        icon: 'equalizer',
-        state: 'app.layout-sidebar.charttest',
-        type: 'link'
-    });
-
-};

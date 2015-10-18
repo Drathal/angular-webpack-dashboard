@@ -1,15 +1,20 @@
 require('../node_modules/angular-material/angular-material.scss');
 require('../node_modules/angular-loading-bar/build/loading-bar.css');
 require('../node_modules/material-design-icons-iconfont/dist/material-design-icons.scss');
+require('../node_modules/nvd3/build/nv.d3.css');
 require('jquery');
 require('lodash');
 
 import { } from 'angular-gettext';
 import { } from 'angular-local-storage';
+import { } from 'd3';
+import { } from 'nvd3';
+import { } from 'angular-nvd3';
 
 var angular = require('angular');
 
 var modules = [
+    'nvd3',
     'gettext',
     'LocalStorageModule',
     require('angular-material'),

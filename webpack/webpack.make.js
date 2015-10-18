@@ -4,6 +4,7 @@ var Clean = require('clean-webpack-plugin');
 var autoprefixer = require('autoprefixer-core');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
+var pkg = require('../package.json');
 
 var srcDir = path.join(__dirname, '../src');
 var buildDir = path.join(__dirname, '../build');
@@ -123,7 +124,7 @@ module.exports = function makeWebpackConfig(options) {
             _: 'lodash'
         }),
         new HtmlWebpackPlugin({
-            title: 'Webpack Angular Dashboard',
+            title: pkg.description,
             template: './src/index.html',
             hash: true,
             inject: 'body',
@@ -136,7 +137,6 @@ module.exports = function makeWebpackConfig(options) {
         config.entry.vendor = [
             'jquery',
             'lodash',
-            'chart.js',
             'angular',
             'angular-material',
             'angular-animate',
@@ -146,8 +146,7 @@ module.exports = function makeWebpackConfig(options) {
             'angular-ui-router',
             'angular-cookies',
             'angular-local-storage',
-            'angular-loading-bar',
-            'angular-chart.js'
+            'angular-loading-bar'
         ];
 
         //noinspection JSUnresolvedFunction

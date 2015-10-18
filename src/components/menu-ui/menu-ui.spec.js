@@ -28,7 +28,7 @@ describe('component', function () {
                     });
 
                     element = angular.element('<ui-menu></ui-menu>');
-                    $scope = $rootScope;
+                    $scope = $rootScope.$new();
 
                     $compile(element)($scope);
                     $scope.$digest();
