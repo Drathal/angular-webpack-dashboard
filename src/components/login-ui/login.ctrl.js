@@ -1,4 +1,4 @@
-module.exports = /* @ngInject */ function ($scope, $mdMedia) {
+module.exports = /*@ngInject*/ function ($scope, $mdMedia) {
 
     $scope.$watch(() => {
         return $mdMedia('gt-sm');

@@ -1,7 +1,9 @@
-<div class="md-whiteframe-z3" class="layout layout-column layout-padding" ng-class="{ loginWide : gtSm }">
+<div class="md-whiteframe-z3 layout layout-column layout-padding login" ng-class="{ loginWide : gtSm }">
 
     <div class="layout layout-align-center-center layout-margin">
         <div translate>Login</div>
+        <span class="flex"></span>
+        <ui-language-select></ui-language-select>
     </div>
 
     <form class="layout layout-column" name="loginForm">
@@ -24,13 +26,13 @@
             </div>
         </md-input-container>
 
-        <md-button class="md-raised md-primary" ui-sref="app.layout-sidebar.feature-a" aria-label="login" translate>Sign In</md-button>
+        <md-button class="md-raised md-primary" ui-sref="app.layout-sidebar.feature-a" aria-label="login"><span translate>Sign In</span></md-button>
 
     </form>
 
     <div class="links layout layout-sm-column layout-gt-sm-row layout-align-space-between-center" >
-        <md-button translate>Forgot password?</md-button>
-        <md-button translate>Create an account</md-button>
+        <md-button><span translate>Forgot password?</span></md-button>
+        <md-button><span translate>Create an account</span></md-button>
     </div>
 </div>
 

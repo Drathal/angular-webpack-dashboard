@@ -159,7 +159,7 @@ module.exports = function makeWebpackConfig(options) {
             new Clean(['../build']),
             new webpack.NoErrorsPlugin(),
             new webpack.optimize.CommonsChunkPlugin({name: 'vendor', filename: 'vendor.[hash].js'}),
-            //new webpack.optimize.MinChunkSizePlugin({minChunkSize: 1000}),
+            new webpack.optimize.MinChunkSizePlugin({minChunkSize: 1000}),
             new webpack.optimize.OccurenceOrderPlugin(true),
             new webpack.optimize.DedupePlugin(),
             new webpack.optimize.UglifyJsPlugin({compress: {warnings: false}})

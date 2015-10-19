@@ -1,4 +1,4 @@
-module.exports.config = /*@ngInject*/ function ($stateProvider, $urlRouterProvider) {
+module.exports = /*@ngInject*/ function ($stateProvider, $urlRouterProvider) {
 
     $urlRouterProvider.otherwise('/login');
 
@@ -6,7 +6,7 @@ module.exports.config = /*@ngInject*/ function ($stateProvider, $urlRouterProvid
         url: '/login',
         views: {
             '': {
-                template: '<login class="layout-fill" layout="column" layout-align="center center"></login>'
+                template: '<login class="layout layout-fill layout-column layout-align-center-center"></login>'
             }
         }
     });

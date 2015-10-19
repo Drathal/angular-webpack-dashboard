@@ -10,6 +10,7 @@ module.exports = angular
         require('./language-select-ui'),
         require('./bind-html-compile'),
         require('./layout-full'),
-        require('./layout-sidebar')
+        require('./layout-sidebar'),
+        require('./login-ui')
     ])
     .name;
