@@ -7,7 +7,7 @@
     "start": "node server.js",
     "build": "webpack --config webpack/webpack.build.js --bail",
     "build:stats": "webpack --config webpack/webpack.build.js --bail --profile --json > stats.json",
-    "build:dev": "webpack-dev-server --config webpack/webpack.dev.js --history-api-fallback --hot --inline --progress",
+    "build:dev": "webpack-dev-server --config webpack/webpack.dev.js --history-api-fallback --hot --inline",
     "test": "karma start",
     "test:dev": "karma start --auto-watch --no-single-run",
     "test:e2e": "protractor protractor.conf.js",

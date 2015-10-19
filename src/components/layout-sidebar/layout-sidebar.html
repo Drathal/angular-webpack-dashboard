@@ -1,10 +1,14 @@
-<md-sidenav layout="column" class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$mdMedia('gt-md')" tabindex="-1">
+<md-sidenav class="md-sidenav-left md-whiteframe-z2 layout layout-column" ng-class="{ 'sidebar-small' : layoutSidebar.sidebarSmall }" md-component-id="left" md-is-locked-open="$mdMedia('gt-md')" tabindex="-1">
 
     <md-toolbar class="sidebar-toolbar md-whiteframe-z2">
         <div class="md-toolbar-tools">
 
             <img src="../../assets/image/mini-logo.png"/>
             <h1 class="flex" translate>Dashboard</h1>
+            <button class="md-button md-icon-button hide show-gt-sm" ng-click="layoutSidebar.toggleSidebarSize()" aria-label="toggle sidenav size" tabindex="0">
+                <md-icon md-font-set="material-icons" ng-if="!layoutSidebar.sidebarSmall">chevron_left</md-icon>
+                <md-icon md-font-set="material-icons" ng-if="layoutSidebar.sidebarSmall">chevron_right</md-icon>
+            </button>
 
         </div>
     </md-toolbar>

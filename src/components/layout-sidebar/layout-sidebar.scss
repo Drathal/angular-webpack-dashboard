@@ -68,3 +68,62 @@ md-menu-item {
     }
 
 }
+
+md-sidenav.md-locked-open {
+    md-content a.md-button md-icon {
+        margin-right: 10px;
+    }
+
+    .md-toolbar-tools {
+        padding-left:10px;
+        padding-right:0px;
+    }
+}
+
+md-sidenav.md-locked-open.sidebar-small {
+
+    width: 47px;
+    min-width: 47px;
+    max-width: 47px;
+
+    overflow: visible;
+
+    md-content {
+        overflow: visible !important;
+
+        a.md-button {
+
+            width: 47px;
+            min-width: 47px;
+            max-width: 47px;
+
+            span {
+                display: none;
+            }
+
+            &:hover {
+
+                width: 247px;
+                min-width: 247px;
+                max-width: 247px;
+
+                background: #ddd;
+
+                span {
+                    display: inline-block;
+                    z-index: 1000;
+                }
+            }
+        }
+    }
+
+    md-toolbar div.md-toolbar-tools {
+
+        h1,
+        img {
+            display:none;
+        }
+
+    }
+
+}

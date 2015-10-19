@@ -14,6 +14,8 @@ class LayoutSidebar {
 
         'ngInject';
 
+        this.sidebarSmall = false;
+
         var unbindChangeSuccess = $rootScope.$on('$locationChangeSuccess', () => {
             $mdSidenav('left').close();
         });
@@ -24,6 +26,10 @@ class LayoutSidebar {
 
         this.toggleSidebar = () => {
             $mdSidenav('left').toggle();
+        };
+
+        this.toggleSidebarSize = () => {
+            this.sidebarSmall = !this.sidebarSmall;
         };
 
     }

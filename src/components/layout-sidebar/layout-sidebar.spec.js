@@ -40,6 +40,14 @@ describe('component', function () {
                 expect(toggle.called).to.equal(true);
             });
 
+            it('should have a toggleSidebar size function', function () {
+                expect(controller.toggleSidebarSize).to.be.a('function');
+
+                expect(controller.sidebarSmall).to.equal(false);
+                controller.toggleSidebarSize();
+                expect(controller.sidebarSmall).to.equal(true);
+            });
+
             it('should close the sidenav on $locationChangeSuccess', function () {
                 rootScope.$emit('$locationChangeSuccess');
                 expect(close.called).to.equal(true);
