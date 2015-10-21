@@ -1,9 +1,9 @@
-var webpackConfig = require('./webpack/webpack.test.js')();
+var webpackConfig = require('../webpack/webpack.test.js')();
 
 module.exports = function karmaConfig(config) {
     config.set({
 
-        basePath: '',
+        basePath: '../',
         port: 9999,
         runnerPort: 9998,
 

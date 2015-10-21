@@ -4,7 +4,7 @@ exports.config = {
 
     allScriptsTimeout: 60000,
 
-    specs: ['./src/**/*.feature'],
+    specs: ['../src/**/*.feature'],
 
     framework: 'cucumber',
 
@@ -12,8 +12,8 @@ exports.config = {
 
     cucumberOpts: {
         require: [
-            './src/**/stepDefinitions.js',
-            'globalStepDefinitions.js'
+            '../src/**/stepDefinitions.js',
+            'stepDefinitions.js'
         ],
         format: 'pretty'
 
@@ -28,7 +28,7 @@ exports.config = {
 
     onPrepare: function () {
 
-        browser.ignoreSynchronization = true;
+        browser.ignoreSynchronization = false;
 
         // browser.driver.manage().window().maximize();
         // browser.driver.manage().window().setSize(1600, 800);
