@@ -84,7 +84,7 @@ module.exports = function makeWebpackConfig(options) {
 
     config.postcss = [
         autoprefixer({
-            browsers: ['last 2 version']
+            browsers: ['last 10 version']
         })
     ];
 
@@ -96,15 +96,11 @@ module.exports = function makeWebpackConfig(options) {
         extensions: [
             '',
             '.js',
+            '.jsx',
             '.html',
             '.css',
             '.scss'
-        ],
-        alias: {
-            lodash: 'lodash',
-            jquery: 'jquery/dist/jquery',
-            angular: 'angular'
-        }
+        ]
     };
 
     config.resolveLoader = {
@@ -135,6 +131,8 @@ module.exports = function makeWebpackConfig(options) {
     if (BUILD) {
 
         config.entry.vendor = [
+            'react',
+            'react-dom',
             'jquery',
             'lodash',
             'd3',

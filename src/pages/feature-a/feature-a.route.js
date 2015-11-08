@@ -1,18 +1,17 @@
-module.exports = /* @ngInject */ function ($stateProvider, gettext) {
+module.exports = /* @ngInject */ function ($stateProvider) {
 
     $stateProvider.state('app.layout-sidebar.feature-a', {
         url: '/feature-a',
         views: {
             'toolbar-title': {
-                /// Toolbar Title
-                template: '<span translate>' + gettext('Feature A') + '</span>'
+                template: require('./feature-a-title.html')
             },
             '': {
                 controller: /* @ngInject */ function (data) {
                     this.data = data;
                 },
                 controllerAs: 'featureAState',
-                template: '<div class="md-whiteframe-z1 white layout-margin"><feature-a data="featureAState.data"></feature-a></div>',
+                template: require('./feature-a.html'),
                 resolve: {
                     data: function () {
                         return {sample: 'sample resolved Data'};

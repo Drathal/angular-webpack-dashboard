@@ -12,6 +12,8 @@ module.exports = function () {
 
         module: {
 
+            noParse: /react\/dist\/react\.js/,
+
             preLoaders: [
                 {
                     test: /\.js$/,
@@ -31,9 +33,22 @@ module.exports = function () {
         },
 
         resolve: {
-            root: __dirname + '/src',
-            modulesDirectories: [path.join(__dirname, '../', 'node_modules')],
+            root: [
+                path.join(__dirname, '../src'),
+                path.join(__dirname, '../node_modules')
+            ],
+            extensions: [
+                '',
+                '.js',
+                '.jsx',
+                '.html',
+                '.css',
+                '.scss'
+            ],
             alias: {
+                react: path.join(__dirname, '../node_modules/react/dist/react.js'),
+                'react-dom': path.join(__dirname, '../node_modules/react-dom/dist/react-dom.js'),
+                jquery:  path.join(__dirname, '../node_modules/jquery/dist/jquery.js'),
                 angular: path.join(__dirname, '../node_modules/angular/index.js')
             }
         }

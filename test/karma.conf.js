@@ -39,7 +39,8 @@ module.exports = function karmaConfig(config) {
         webpack: webpackConfig,
 
         webpackServer: {
-            noInfo: true
+            noInfo: true,
+            quiet: true
         },
 
         coverageReporter: {

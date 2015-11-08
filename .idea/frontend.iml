@@ -13,6 +13,5 @@
     <orderEntry type="library" name="mocha-phantomjs-DefinitelyTyped" level="application" />
     <orderEntry type="library" name="mocha-DefinitelyTyped" level="application" />
     <orderEntry type="library" name="frontend node_modules" level="project" />
-    <orderEntry type="library" name="Node.js v0.12.7 Core Modules" level="application" />
   </component>
 </module>
