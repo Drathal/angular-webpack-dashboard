@@ -1,5 +1,3 @@
-// var CounterCtrl = require('./counter.ctrl');
-
 describe('component', function () {
     describe('hello-react ui', function () {
 
