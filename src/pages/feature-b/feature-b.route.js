@@ -7,7 +7,7 @@ module.exports = /*@ngInject*/ function($stateProvider, gettext) {
                 template: '<span translate>' + gettext('Feature B') + '</span>'
             },
             '': {
-                template: '<div class="md-whiteframe-z1 white" layout-margin><feature-b></feature-b></div>'
+                template: '<feature-b class="md-whiteframe-z1 white"></feature-b>'
             }
         }
     });

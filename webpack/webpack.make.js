@@ -20,10 +20,6 @@ module.exports = function makeWebpackConfig(options) {
 
     config.cache = true;
 
-    config.entry = {
-        app: './app.js'
-    };
-
     config.output = {
         path: buildDir,
         publicPath: BUILD ? '/' : 'http://localhost:' + port + '/',
@@ -128,6 +124,10 @@ module.exports = function makeWebpackConfig(options) {
         })
     ];
 
+    config.entry = {
+        app: './app.js'
+    };
+
     if (BUILD) {
 
         config.entry.vendor = [
@@ -156,11 +156,11 @@ module.exports = function makeWebpackConfig(options) {
         config.plugins.push(
             new Clean(['../build']),
             new webpack.NoErrorsPlugin(),
-            new webpack.optimize.CommonsChunkPlugin({name: 'vendor', filename: 'vendor.[hash].js'}),
-            new webpack.optimize.MinChunkSizePlugin({minChunkSize: 1000}),
-            new webpack.optimize.OccurenceOrderPlugin(true),
             new webpack.optimize.DedupePlugin(),
-            new webpack.optimize.UglifyJsPlugin({compress: {warnings: false}})
+            new webpack.optimize.OccurenceOrderPlugin(),
+            new webpack.optimize.MinChunkSizePlugin({minChunkSize: 51200}),
+            new webpack.optimize.CommonsChunkPlugin({name: 'vendor', filename: 'vendor.[hash].js'}),
+            new webpack.optimize.UglifyJsPlugin({mangle: true, compress: {warnings: false}})
         );
     }
 
