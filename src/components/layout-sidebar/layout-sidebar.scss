@@ -57,8 +57,6 @@ md-menu-item {
     width:30px;
 }
 
-
-
 .white {
     background-color: #fff;
 
@@ -66,10 +64,23 @@ md-menu-item {
         margin-top: 0;
         padding-top:0.25em;
     }
+}
 
+a.md-button,
+md-sidenav {
+    transition: width .25s ease-in-out, min-width .25s ease-in-out;
 }
 
 md-sidenav.md-locked-open {
+
+    overflow: visible;
+
+    a.md-button {
+        width: 304px;
+        min-width: 304px;
+        max-width: 304px;
+    }
+
     md-content a.md-button md-icon {
         margin-right: 10px;
     }
@@ -79,6 +90,7 @@ md-sidenav.md-locked-open {
         padding-right:0px;
     }
 }
+
 
 md-sidenav.md-locked-open.sidebar-small {
 
@@ -118,12 +130,12 @@ md-sidenav.md-locked-open.sidebar-small {
     }
 
     md-toolbar div.md-toolbar-tools {
-
         h1,
         img {
             display:none;
         }
-
     }
 
 }
+
+

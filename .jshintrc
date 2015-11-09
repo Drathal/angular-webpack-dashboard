@@ -23,7 +23,9 @@
         "inject": false,
         "sinon": true,
         "angular": true,
+        "require" : true,
         "d3": true,
-        "nv": true
+        "nv": true,
+        "_": true
     }
 }

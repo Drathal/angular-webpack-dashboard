@@ -28,7 +28,6 @@
     "requireCommaBeforeLineBreak": true,
     "requireSpaceBeforeBinaryOperators": true,
     "requireSpaceAfterBinaryOperators": true,
-    "requireCamelCaseOrUpperCaseIdentifiers": true,
     "requireLineFeedAtFileEnd": true,
     "requireCapitalizedConstructors": true,
     "requireSpacesInForStatement": true,

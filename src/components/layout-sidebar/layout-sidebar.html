@@ -13,15 +13,15 @@
         </div>
     </md-toolbar>
 
-    <md-content ui-view="left-content" role="navigation" flex md-scroll-y>
+    <md-content ui-view="left-content" role="navigation" class="leftContent flex md-scroll-y">
         <ui-menu layout="column"></ui-menu>
     </md-content>
 
 </md-sidenav>
 
-<div layout="column" layout-fill role="main">
+<md-content class="layout layout-column layout-fill"  role="main">
 
-    <md-toolbar class="md-whiteframe-z2">
+    <md-toolbar class="md-whiteframe-z2 mainToolbar">
         <div class="main-toolbar md-toolbar-tools">
 
             <span ui-view="toolbar-before"> </span>
@@ -37,7 +37,7 @@
         </div>
     </md-toolbar>
 
-    <md-content ui-view flex md-scroll-y ></md-content>
+    <md-content ui-view class="mainContent flex layout layout-column md-scroll-y" ></md-content>
 
-</div>
+</md-content>
 
