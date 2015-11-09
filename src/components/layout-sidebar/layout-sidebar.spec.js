@@ -79,9 +79,9 @@ describe('component', function () {
                 });
             });
 
-            it('should render the app directive', function () {
-                expect($(element).find('md-sidenav').length).to.equal(1);
-                expect($(element).find('md-content').length).to.equal(2);
+            it('should render the directive', function () {
+                expect($(element).find('md-sidenav').length).to.be.above(0);
+                expect($(element).find('md-content').length).to.be.above(0);
             });
 
         });
