@@ -105,6 +105,11 @@ module.exports = function makeWebpackConfig(options) {
 
     //noinspection JSUnresolvedFunction
     config.plugins = [
+        new webpack.DefinePlugin({
+            'process.env': {
+                NODE_ENV: JSON.stringify(process.env.NODE_ENV)
+            }
+        }),
         new ExtractTextPlugin('[name].[hash].css', {
             disable: !BUILD,
             allChunks: true

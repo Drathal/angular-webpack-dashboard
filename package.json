@@ -1,10 +1,10 @@
 {
   "name": "angular-webpack-dashboard",
-  "version": "0.0.32",
+  "version": "0.0.4",
   "description": "Angular Webpack Dashboard",
   "license": "MIT",
   "scripts": {
-    "start": "node server.js",
+    "start": "node index.js",
     "build": "webpack --config webpack/webpack.build.js --bail",
     "build:stats": "webpack --config webpack/webpack.build.js --bail --profile --json > stats.json",
     "build:dev": "webpack-dev-server --config webpack/webpack.dev.js --history-api-fallback --hot --inline",
@@ -13,7 +13,6 @@
     "test:e2e": "npm run webdriver:update && protractor test/protractor.conf.js",
     "webdriver:update": "webdriver-manager update",
     "webdriver:start": "webdriver-manager start",
-    "metrics": "plato -r -d build/metrics src -t 'Frontend metrics'",
     "translate:extract": "angular-gettext-cli --files \"./src/+(pages|components)/**/*.+(html|js)\" --dest ./src/translation/translation.pot --marker-name gettext"
   },
   "repository": {
@@ -106,6 +105,6 @@
     "webpack-dev-server": "^1.12.0"
   },
   "engines": {
-    "node": ">=0.12.0"
+    "node": ">=4.2.2"
   }
 }

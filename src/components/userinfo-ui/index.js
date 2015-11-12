@@ -14,7 +14,4 @@ module.exports = angular
             template: require('./userinfo.html')
         };
     })
-    .config(function () {
-
-    })
     .name;

@@ -1,11 +1,17 @@
-FROM sinet/nginx-node:0.12.4
+FROM node:4.2.2
 
-COPY . /usr/src/app
-WORKDIR /usr/src/app
+RUN useradd -ms /bin/bash node
+ADD . /home/node/src
+RUN chown -R node:node /home/node
 
-RUN npm install
-RUN npm run build
+USER node
+ENV HOME /home/node
+WORKDIR /home/node/src
 
-ADD nginx.conf /etc/nginx/nginx.conf
+RUN npm install && \
+    npm run build && \
+    npm run test
 
-CMD ["nginx", "-g", "daemon off;"]
+EXPOSE 8081
+
+CMD ["npm", "run", "start"]

@@ -46,6 +46,16 @@ Open in Browser at: localhost:8080
 ### listen for changes and rerun tests    
 
     npn run test:dev
+    
+## docker
+### build image
+
+    docker build -t dashboard .
+    
+### run container    
+
+    docker run -p 8888:8888 -t dashboard
+    
 
 ## FAQ
 

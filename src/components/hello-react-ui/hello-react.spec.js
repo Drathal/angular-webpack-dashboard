@@ -17,7 +17,7 @@ describe('component', function () {
             });
 
             it('should render the counter directive', function () {
-                expect($(element).text()).to.equal('hello test! I am a react.js component.');
+                expect($(element).text()).to.equal('hello test! I am a react.js component.test');
             });
 
         });

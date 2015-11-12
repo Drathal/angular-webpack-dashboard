@@ -5,7 +5,6 @@ var httpProxy = require('http-proxy');
 
 var port = 8888;
 var publicPath = path.resolve(__dirname, 'build');
-var dataPath = path.resolve(__dirname, 'data');
 var app = express();
 
 var proxy = httpProxy.createProxyServer({
@@ -28,13 +27,7 @@ app
         res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
         next();
     })
-    .all('/proxy/*', function (req, res) {
-        proxy.web(req, res, {
-            target: 'http://localhost:8888/'
-        });
-    })
     .use(express.static(publicPath))
-    .use('/data', express.static(dataPath))
     .listen(port, function () {
         console.log('Server running on port ' + port);
     });

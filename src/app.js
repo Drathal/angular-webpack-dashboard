@@ -7,14 +7,10 @@ require('lodash');
 
 import { } from 'angular-gettext';
 import { } from 'angular-local-storage';
-import { } from 'd3';
-import { } from 'nvd3';
-import { } from 'angular-nvd3';
 
 var angular = require('angular');
 
 var modules = [
-    'nvd3',
     'gettext',
     'LocalStorageModule',
     require('angular-material'),
