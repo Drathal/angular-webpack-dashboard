@@ -12,6 +12,7 @@ A little frontend to play around with:
   * material design
   * webpack
   * component driven frontend
+  * docker
 
 ## requirements
   * [git](https://git-scm.com/)
